@@ -15,7 +15,7 @@ body {
     transform-origin: center;
     transform: rotate(180deg);
     position: relative;
-    z-index: 5;
+    z-index: 0;
 }
 
 #kopf {
@@ -76,6 +76,51 @@ nav {
 }
 
 .fotos {
-    color: #be2308;
     margin-top: 250px;
+}
+
+h3 {
+    font-style: italic;
+    color: #be2308;
+}
+
+h2 {
+    color: #be2308;
+    text-decoration: underline;
+}
+
+.videos {
+    margin-top: 50px;
+}
+
+.boxen {
+    text-align: left;
+    margin-left: 575px;
+}
+
+hr {
+    color: #be2308;
+    border-bottom: 2px solid;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    color: #be2308;
+}
+
+#anker5:hover{
+    color: white;
+}
+
+.logos {
+    position: relative;
+    z-index: 10;
+    margin-top: 70px;
+}
+
+.logo1:hover {
+   transform: scale(1.3);
 }
