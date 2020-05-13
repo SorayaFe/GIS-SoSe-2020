@@ -74,7 +74,7 @@ nav {
 }
 
 .fotos {
-    margin-top: 175px;
+    margin-top: 75px;
 }
 
 h3 {
@@ -144,4 +144,8 @@ a:hover {
 
 #senden {
     color: white;
+}
+
+#extraÜberschrift{
+    text-align: left;
 }
