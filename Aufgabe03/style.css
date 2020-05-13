@@ -52,8 +52,6 @@ nav {
 #current {
     color: #be2308;
     text-decoration: none;
-    border-left:2px solid white;
-    border-right:2px solid white;
 }
 
 .navlinks {
@@ -76,7 +74,7 @@ nav {
 }
 
 .fotos {
-    margin-top: 250px;
+    margin-top: 175px;
 }
 
 h3 {
@@ -105,14 +103,11 @@ hr {
 
 a {
     text-decoration: none;
+    color: black;
 }
 
 a:hover {
     color: #be2308;
-}
-
-#anker5:hover{
-    color: white;
 }
 
 .logos {
@@ -123,4 +118,8 @@ a:hover {
 
 .logo1:hover {
    transform: scale(1.3);
+}
+
+.inhalt {
+    margin-top: 75px;
 }
