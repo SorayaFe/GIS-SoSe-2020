@@ -123,3 +123,25 @@ a:hover {
 .inhalt {
     margin-top: 75px;
 }
+
+.ne {
+    color: #be2308;
+}
+
+#kontakt {
+    margin-top: 100px;
+    text-align: left;
+    color: rgb(158, 158, 158);
+}
+
+.feld {
+    background-color: rgb(158, 158, 158);
+}
+
+::placeholder {
+    color: white;
+}
+
+#senden {
+    color: white;
+}
