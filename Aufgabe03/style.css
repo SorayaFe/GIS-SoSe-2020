@@ -146,6 +146,17 @@ a:hover {
     color: white;
 }
 
-#extraÜberschrift{
+#extraÜberschrift {
     text-align: left;
+}
+
+#copyright {
+    background-color: rgb(250, 216, 194);
+    color: #be2308;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    border-width: 10;
+    border-color:#be2308;
+    border-style: solid;
+    border-radius: 10px;
 }
