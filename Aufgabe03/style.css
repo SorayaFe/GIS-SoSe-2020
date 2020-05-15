@@ -23,6 +23,7 @@ body {
     margin-top: -400px;
     font-size: 90pt;
     color: ivory;
+    text-shadow: -7px -5px rgb(102, 0, 0);
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-style: bold;
     position: relative;
@@ -36,6 +37,7 @@ body {
     color: ivory;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-style: italic;
+    text-shadow: -4px -2px rgb(102, 0, 0);
     position: relative;
     z-index: 10;
 }
@@ -56,21 +58,23 @@ nav {
 
 .navlinks {
     text-decoration: none;
-    color: white;
-    border-left:2px solid white;
-    border-right:2px solid white;
+    color: ivory;
+    border-left:2px solid ivory;
+    border-right:2px solid ivory;
 }
 
 .nav {
     width: 250px;
     height: 25px;
     background-color: black;
+    border-radius: 7px;
+    padding-top: 4px;
     
 }
 
 .extralink {
     text-decoration: none;
-    color: white;
+    color: ivory;
 }
 
 .fotos {
@@ -139,11 +143,11 @@ a:hover {
 }
 
 ::placeholder {
-    color: white;
+    color: ivory;
 }
 
 #senden {
-    color: white;
+    color: ivory;
 }
 
 #extraÜberschrift {
