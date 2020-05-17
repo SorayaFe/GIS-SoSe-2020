@@ -6,7 +6,7 @@ body {
 
 .circle {
     margin-top: -100px;
-    width: 1000px;
+    width: 800px;
     height: 500px;
     margin-right: auto;
     margin-left: auto;
@@ -20,7 +20,7 @@ body {
 
 #kopf {
     text-align: center;
-    margin-top: -400px;
+    margin-top: -380px;
     font-size: 90pt;
     color: ivory;
     text-shadow: -7px -5px rgb(102, 0, 0);
@@ -46,7 +46,7 @@ nav {
    position: fixed;
    top: 0;
    right: 0;
-   margin-right: 40px;
+   margin-right: 232px;
    text-align: center;
    z-index: 20;
 }
@@ -133,8 +133,7 @@ a:hover {
 }
 
 #kontakt {
-    margin-top: 100px;
-    text-align: left;
+    margin-top: 120px;
     color: rgb(158, 158, 158);
 }
 
@@ -151,10 +150,15 @@ a:hover {
 }
 
 #extraÜberschrift {
-    text-align: left;
+    position: relative;
+    top: 80px;
 }
 
 #copyright {
+    width: 800px;
+    position: relative;
+    margin-right: auto;
+    margin-left: auto;
     background-color: rgb(250, 216, 194);
     color: #be2308;
     padding-bottom: 10px;
@@ -163,4 +167,14 @@ a:hover {
     border-color:#be2308;
     border-style: solid;
     border-radius: 10px;
+}
+
+#Studium {
+    margin-left: auto;
+    margin-right: auto;
+    width: 800px;
+}
+
+hr{
+    width: 800px;
 }
