@@ -36,24 +36,48 @@ body{
     }
 }
 
-.menu {
+.wagen {
     position: relative;
     z-index: 20;
-    padding-bottom: 400px;
-    margin-top: -400px;
+    padding-bottom: 450px;
+    margin-top: -450px;
     text-align: right;
     margin-right: 60px;
 }
 
 @media screen and (max-width: 600px){
+    .wagen {
+        margin-top: -400px;
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 1024px){
+    .wagen {
+        margin-top: -575px;
+        padding-bottom: 600px;
+    }
+}
+
+.menu {
+    position: relative;
+    z-index: 20;
+    padding-bottom: 450px;
+    margin-top: -500px;
+    text-align: left;
+    margin-left: 60px;
+    font-size: 20px;
+}
+
+@media screen and (max-width: 600px){
     .menu {
-        margin-top: -350px;
+        margin-top: -480px;
+        font-size: 15px;
     }
 }
 
 @media screen and (min-width: 600px) and (max-width: 1024px){
     .menu {
-        margin-top: -550px;
+        margin-top: -640px;
         padding-bottom: 600px;
     }
 }
@@ -75,6 +99,10 @@ h1 {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+}
+
+.artikel:nth-child(even){
+    border-color: rgb(84, 84, 231);
 }
 
 .artikel {
@@ -111,14 +139,29 @@ h1 {
     cursor: pointer;
 }
 
-#preis {
+#preis, #preis2 {
     font-size: 150%;
     color: rgb(231, 64, 100);
+}
+
+#preis2::after{
+    content: "Ausverkauft";
+    color: rgb(231, 125, 64);
 }
 
 .oreo {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+img[alt=Whiskas] {
+    opacity: 0.4;
+}
+
+h1+p{
+    color: rgb(177, 40, 70);
+    text-align: center;
 }
 
 footer {
