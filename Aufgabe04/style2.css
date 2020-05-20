@@ -168,6 +168,10 @@ h1+p{
     max-width: 80%;
 }
 
+.bildgröße {
+    max-width: 6%;
+}
+
 footer {
     text-align: center;
 }
