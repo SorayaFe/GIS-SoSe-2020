@@ -164,6 +164,10 @@ h1+p{
     text-align: center;
 }
 
+.bild {
+    max-width: 80%;
+}
+
 footer {
     text-align: center;
 }
