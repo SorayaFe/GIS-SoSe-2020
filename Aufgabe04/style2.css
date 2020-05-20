@@ -1,0 +1,106 @@
+@font-face {
+    font-family: meineschriftart;
+    src: url(merienda/Merienda-Regular.ttf)
+}
+
+body{
+    background-color: lavender;
+    font-family: meineschriftart;
+}
+
+@font-face {
+    font-family: ueberschrift;
+    src: url(avocado-creamy/Avocado\ Creamy.ttf);
+}
+
+@media screen and (max-width: 600px) {
+    #kopf h1 {
+        font-size: 50px;
+    }
+}
+
+#kopf {
+    width: 100%;
+    padding-top: 4%;
+    padding-bottom: 4%;
+    background-image: url(candy-background.jpg);
+    margin-top: -20px;
+    z-index: 5;
+    position: relative;
+}
+
+#kopf h1 {
+    font-family: ueberschrift;
+    text-align: center;
+    font-size: 150px;
+    position: relative;
+}
+
+.menu {
+    position: relative;
+    z-index: 20;
+    padding-bottom: 400px;
+    margin-top: -400px;
+    text-align: right;
+    margin-right: 40px;
+}
+
+a {
+    text-decoration: none;
+    color: purple;
+}
+
+a:hover {
+    opacity: 0.5;
+}
+
+.rittersport {
+    width: 100%;
+    height: auto;
+    left: 0;
+}
+
+h1 {
+    color: purple;
+}
+
+.rittersport {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.artikel {
+    width: 20%;
+    height: 350px;
+    text-align: center;
+    margin-top: 4%;
+    padding-top: 2%;
+    padding-bottom: 5%;
+    border-style: solid;
+    border-color: purple;
+    border: 1;
+    float: left;
+    margin-right: 2%;
+    margin-left: 2%;
+}
+
+.artikel button {
+    font-size: 100%;
+    background-color: rgb(173, 233, 173);
+    border: none;
+    cursor: pointer;
+}
+
+#preis {
+    font-size: 150%;
+    color: rgb(231, 64, 100);
+}
+
+.oreo {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+footer {
+    text-align: center;
+}
