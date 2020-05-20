@@ -13,12 +13,6 @@ body{
     src: url(avocado-creamy/Avocado\ Creamy.ttf);
 }
 
-@media screen and (max-width: 600px) {
-    #kopf h1 {
-        font-size: 50px;
-    }
-}
-
 #kopf {
     width: 100%;
     padding-top: 4%;
@@ -36,13 +30,32 @@ body{
     position: relative;
 }
 
+@media screen and (max-width: 600px){
+    #kopf h1 {
+        font-size: 100px;
+    }
+}
+
 .menu {
     position: relative;
     z-index: 20;
     padding-bottom: 400px;
     margin-top: -400px;
     text-align: right;
-    margin-right: 40px;
+    margin-right: 60px;
+}
+
+@media screen and (max-width: 600px){
+    .menu {
+        margin-top: -350px;
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 1024px){
+    .menu {
+        margin-top: -550px;
+        padding-bottom: 600px;
+    }
 }
 
 a {
@@ -54,12 +67,6 @@ a:hover {
     opacity: 0.5;
 }
 
-.rittersport {
-    width: 100%;
-    height: auto;
-    left: 0;
-}
-
 h1 {
     color: purple;
 }
@@ -67,6 +74,7 @@ h1 {
 .rittersport {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
 .artikel {
@@ -80,8 +88,20 @@ h1 {
     border-color: purple;
     border: 1;
     float: left;
-    margin-right: 2%;
-    margin-left: 2%;
+}
+
+@media screen and (max-width: 600px){
+    .artikel {
+        width: 90%;
+        height: 500px;
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 1024px){
+    .artikel {
+        width: 40%;
+        height: 400px;
+    }
 }
 
 .artikel button {
