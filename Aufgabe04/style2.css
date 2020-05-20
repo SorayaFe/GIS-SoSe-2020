@@ -139,12 +139,12 @@ h1 {
     cursor: pointer;
 }
 
-#preis, #preis2 {
+.preis, .preis2 {
     font-size: 150%;
     color: rgb(231, 64, 100);
 }
 
-#preis2::after{
+.preis2::after{
     content: "Ausverkauft";
     color: rgb(231, 125, 64);
 }
