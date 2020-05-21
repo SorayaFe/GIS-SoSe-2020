@@ -38,7 +38,7 @@ body{
 
 .wagen {
     position: relative;
-    z-index: 20;
+    z-index: 30;
     padding-bottom: 450px;
     margin-top: -450px;
     text-align: right;
@@ -93,7 +93,11 @@ a {
     color: purple;
 }
 
-a:hover {
+.menu a:hover {
+    opacity: 0.5;
+}
+
+.wagen a:hover{
     opacity: 0.5;
 }
 
