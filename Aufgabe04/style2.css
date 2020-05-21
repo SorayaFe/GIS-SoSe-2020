@@ -58,6 +58,12 @@ body{
     }
 }
 
+@media screen and (max-height: 415px) {
+    .wagen {
+        margin-top: -300px;
+    }
+}
+
 .menu {
     position: relative;
     z-index: 20;
