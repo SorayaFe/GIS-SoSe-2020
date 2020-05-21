@@ -58,6 +58,11 @@ body{
     }
 }
 
+@media only screen and (orientation: landscape) {
+    .wagen {
+        margin-top: -400px;
+    }
+
 .menu {
     position: relative;
     z-index: 20;
