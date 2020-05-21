@@ -138,6 +138,12 @@ h1 {
     }
 }
 
+@media screen and (min-width: 1900px){
+    .artikel{
+        padding-bottom: 7%;
+    }
+}
+
 .artikel button {
     font-size: 100%;
     background-color: rgb(173, 233, 173);
