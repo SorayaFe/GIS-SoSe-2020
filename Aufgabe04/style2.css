@@ -53,7 +53,7 @@ body{
 
 @media screen and (min-width: 600px) and (max-width: 1024px){
     .wagen {
-        margin-top: -420px;
+        margin-top: -575px;
         padding-bottom: 600px;
     }
 }
@@ -84,6 +84,13 @@ body{
 @media screen and (min-width: 600px) and (max-width: 1024px){
     .menu {
         margin-top: -640px;
+        padding-bottom: 600px;
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 768px) and (max-height:1024px){
+    .menu {
+        margin-top: -750px;
         padding-bottom: 600px;
     }
 }
