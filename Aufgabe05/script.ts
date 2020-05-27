@@ -27,7 +27,13 @@ namespace Aufgabe05 {
         preis.setAttribute("class", "preis");
         preis.innerHTML = rittersport[i]._preis;
         divArtikel.appendChild(preis);
+
+        let knopf: HTMLElement = document.createElement("button");
+        knopf.setAttribute("type", "button");
+        knopf.innerText = "Kaufen";
+        preis.appendChild(knopf);
     }
+    
     document.getElementById("rispo")?.appendChild(kategorie);
 
 
@@ -58,6 +64,11 @@ namespace Aufgabe05 {
         preis.setAttribute("class", "preis");
         preis.innerHTML = oreo[i]._preis;
         divArtikel.appendChild(preis);
+
+        let knopf: HTMLElement = document.createElement("button");
+        knopf.setAttribute("type", "button");
+        knopf.innerText = "Kaufen";
+        preis.appendChild(knopf);
     }
     
     document.getElementById("kekse")?.appendChild(kategorie2);

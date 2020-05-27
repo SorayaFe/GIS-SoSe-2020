@@ -22,6 +22,10 @@ var Aufgabe05;
         preis.setAttribute("class", "preis");
         preis.innerHTML = Aufgabe05.rittersport[i]._preis;
         divArtikel.appendChild(preis);
+        let knopf = document.createElement("button");
+        knopf.setAttribute("type", "button");
+        knopf.innerText = "Kaufen";
+        preis.appendChild(knopf);
     }
     document.getElementById("rispo")?.appendChild(kategorie);
     let kategorie2 = document.createElement("div");
@@ -45,6 +49,10 @@ var Aufgabe05;
         preis.setAttribute("class", "preis");
         preis.innerHTML = Aufgabe05.oreo[i]._preis;
         divArtikel.appendChild(preis);
+        let knopf = document.createElement("button");
+        knopf.setAttribute("type", "button");
+        knopf.innerText = "Kaufen";
+        preis.appendChild(knopf);
     }
     document.getElementById("kekse")?.appendChild(kategorie2);
 })(Aufgabe05 || (Aufgabe05 = {}));
