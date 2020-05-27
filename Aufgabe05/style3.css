@@ -156,9 +156,16 @@ h1 {
     }
 }
 
-.artikel button {
+#gibt {
     font-size: 100%;
     background-color: rgb(173, 233, 173);
+    border: none;
+    cursor: pointer;
+}
+
+#gibtNicht {
+    font-size: 100%;
+    background-color: rgb(252, 74, 74);
     border: none;
     cursor: pointer;
 }

@@ -24,8 +24,15 @@ var Aufgabe05;
         divArtikel.appendChild(preis);
         let knopf = document.createElement("button");
         knopf.setAttribute("type", "button");
-        knopf.innerText = "Kaufen";
         preis.appendChild(knopf);
+        if (Aufgabe05.rittersport[i]._verfuegbar == true) {
+            knopf.innerText = "Kaufen";
+            knopf.setAttribute("id", "gibt");
+        }
+        else {
+            knopf.innerText = "Ausverkauft";
+            knopf.setAttribute("id", "gibtNicht");
+        }
     }
     document.getElementById("rispo")?.appendChild(kategorie);
     let kategorie2 = document.createElement("div");
@@ -51,8 +58,15 @@ var Aufgabe05;
         divArtikel.appendChild(preis);
         let knopf = document.createElement("button");
         knopf.setAttribute("type", "button");
-        knopf.innerText = "Kaufen";
         preis.appendChild(knopf);
+        if (Aufgabe05.oreo[i]._verfuegbar == true) {
+            knopf.innerText = "Kaufen";
+            knopf.setAttribute("id", "gibt");
+        }
+        else {
+            knopf.innerText = "Ausverkauft";
+            knopf.setAttribute("id", "gibtNicht");
+        }
     }
     document.getElementById("kekse")?.appendChild(kategorie2);
 })(Aufgabe05 || (Aufgabe05 = {}));

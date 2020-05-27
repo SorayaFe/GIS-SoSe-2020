@@ -27,11 +27,22 @@ namespace Aufgabe05 {
         preis.setAttribute("class", "preis");
         preis.innerHTML = rittersport[i]._preis;
         divArtikel.appendChild(preis);
-
+        
         let knopf: HTMLElement = document.createElement("button");
         knopf.setAttribute("type", "button");
-        knopf.innerText = "Kaufen";
         preis.appendChild(knopf);
+
+        if (rittersport[i]._verfuegbar == true) {
+
+            knopf.innerText = "Kaufen";
+            knopf.setAttribute("id", "gibt");
+        }
+
+        else {
+
+            knopf.innerText = "Ausverkauft";
+            knopf.setAttribute("id", "gibtNicht");
+        }
     }
     
     document.getElementById("rispo")?.appendChild(kategorie);
@@ -67,8 +78,19 @@ namespace Aufgabe05 {
 
         let knopf: HTMLElement = document.createElement("button");
         knopf.setAttribute("type", "button");
-        knopf.innerText = "Kaufen";
         preis.appendChild(knopf);
+
+        if (oreo[i]._verfuegbar == true) {
+
+            knopf.innerText = "Kaufen";
+            knopf.setAttribute("id", "gibt");
+        }
+
+        else {
+
+            knopf.innerText = "Ausverkauft";
+            knopf.setAttribute("id", "gibtNicht");
+        }
     }
     
     document.getElementById("kekse")?.appendChild(kategorie2);
