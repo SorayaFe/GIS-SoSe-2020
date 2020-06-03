@@ -44,7 +44,7 @@
         if (artikelliste[i]._verfuegbar == true) {
 
             knopf.innerText = "Kaufen";
-            knopf.setAttribute("id", "gibt");
+            knopf.setAttribute("class", "gibt");
             knopf.addEventListener("click", handleButton);
 
             //Funktion für Knopf-Artikel-Counter und Preis
@@ -76,7 +76,7 @@
         else {
 
             knopf.innerText = "Ausverkauft";
-            knopf.setAttribute("id", "gibtNicht");
+            knopf.setAttribute("class", "gibtNicht");
         }
     }
 }

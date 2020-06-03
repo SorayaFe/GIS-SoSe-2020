@@ -67,8 +67,8 @@ body{
         margin-top: -350px;
     }
     #zahlDiv {
-        right: 20%;
-        margin-top: -490px;
+        right: 25%;
+        margin-top: -480px;
     }
     #zahlDiv p {
         font-size: 10px;
@@ -190,14 +190,14 @@ h1 {
     }
 }
 
-#gibt {
+.gibt {
     font-size: 100%;
     background-color: rgb(173, 233, 173);
     border: none;
     cursor: pointer;
 }
 
-#gibtNicht {
+.gibtNicht {
     font-size: 100%;
     background-color: rgb(252, 74, 74);
     border: none;
