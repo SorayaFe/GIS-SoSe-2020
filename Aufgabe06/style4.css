@@ -1,0 +1,247 @@
+@font-face {
+    font-family: meineschriftart;
+    src: url(merienda/Merienda-Regular.ttf)
+}
+
+body{
+    background-color: lavender;
+    font-family: meineschriftart;
+}
+
+@font-face {
+    font-family: ueberschrift;
+    src: url(avocado-creamy/Avocado\ Creamy.ttf);
+}
+
+#kopf {
+    width: 100%;
+    padding-top: 4%;
+    padding-bottom: 4%;
+    background-image: url(bilder/candy-background.jpg);
+    margin-top: -20px;
+    z-index: 5;
+    position: relative;
+}
+
+#fixedNav {
+    position: fixed;
+    z-index: 40;
+}
+
+#kopf h1 {
+    font-family: ueberschrift;
+    text-align: center;
+    font-size: 150px;
+    position: relative;
+}
+
+@media screen and (max-width: 600px){
+    #kopf h1 {
+        font-size: 90px;
+    }
+}
+
+.wagen {
+    position: relative;
+    z-index: 30;
+    padding-bottom: 450px;
+    margin-top: -450px;
+    text-align: right;
+    margin-right: 60px;
+}
+
+#zahlDiv {
+    position: fixed;
+    z-index: 30;
+    margin-top: -515px;
+    right: 12%;
+    background-color: rgb(255, 176, 97);
+    border-radius: 100px;
+    padding-right: 1.8%;
+    padding-left: 1.8%;
+}
+
+
+@media screen and (max-width: 600px){
+    .wagen {
+        margin-top: -350px;
+    }
+    #zahlDiv {
+        right: 20%;
+        margin-top: -490px;
+    }
+    #zahlDiv p {
+        font-size: 10px;
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 1024px){
+    .wagen {
+        margin-top: -575px;
+        padding-bottom: 600px;
+    }
+    #zahlDiv {
+        right: 15%;
+        margin-top: -650px;
+    }
+}
+
+@media screen and (max-height: 415px) {
+    .wagen {
+        margin-top: -575px;
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 768px) and (max-height:1024px){
+    .menu {
+        margin-top: -700px;
+        padding-bottom: 600px;
+    }
+}
+
+.menu {
+    position: relative;
+    width: 50%;
+    z-index: 30;
+    padding-bottom: 450px;
+    margin-top: -550px;
+    text-align: left;
+    margin-left: 60px;
+    font-size: 20px;
+}
+
+@media screen and (max-width: 600px){
+    .menu {
+        margin-top: -480px;
+        font-size: 10px;
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 1024px){
+    .menu {
+        margin-top: -640px;
+        padding-bottom: 600px;
+    }
+}
+
+.menu a{
+    color: rgb(177, 40, 70);
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+    color: purple;
+    cursor: pointer;
+}
+
+.menu a:hover {
+    opacity: 0.5;
+}
+
+.wagen a:hover{
+    opacity: 0.5;
+}
+
+h1 {
+    color: purple;
+}
+
+#rispoDiv {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.artikel:nth-child(even){
+    border-color: rgb(84, 84, 231);
+}
+
+.artikel {
+    width: 20%;
+    height: 350px;
+    text-align: center;
+    margin-top: 4%;
+    padding-top: 2%;
+    padding-bottom: 5%;
+    border-style: solid;
+    border-color: purple;
+    border: 1;
+    float: left;
+}
+
+@media screen and (max-width: 600px){
+    .artikel {
+        width: 90%;
+        height: 450px;
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 1025px){
+    .artikel {
+        width: 40%;
+        height: 400px;
+    }
+}
+
+@media screen and (min-width: 1900px){
+    .artikel{
+        padding-bottom: 7%;
+    }
+}
+
+#gibt {
+    font-size: 100%;
+    background-color: rgb(173, 233, 173);
+    border: none;
+    cursor: pointer;
+}
+
+#gibtNicht {
+    font-size: 100%;
+    background-color: rgb(252, 74, 74);
+    border: none;
+    cursor: pointer;
+}
+
+.preis, .preis2 {
+    font-size: 150%;
+    color: rgb(231, 64, 100);
+}
+
+.preis2::after{
+    content: "Ausverkauft";
+    color: rgb(231, 125, 64);
+}
+
+#oreoDiv {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+img[alt=Whiskas] {
+    opacity: 0.4;
+}
+
+h1+p{
+    color: rgb(177, 40, 70);
+    text-align: center;
+}
+
+.bild {
+    max-width: 80%;
+}
+
+.bildgröße {
+    max-width: 6%;
+}
+
+button {
+    position: relative;
+    z-index: 40;
+}
+
+footer {
+    text-align: center;
+}
