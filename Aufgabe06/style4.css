@@ -52,7 +52,7 @@ body{
 
 #zahlDiv {
     position: fixed;
-    z-index: 30;
+    z-index: 40;
     margin-top: -515px;
     right: 12%;
     background-color: rgb(255, 176, 97);

@@ -104,6 +104,5 @@ var Aufgabe06;
         let ueberschriftOreo = document.getElementById("ueberschrift2");
         ueberschriftOreo.hidden = false;
     }
-    console.log("kjlkjl");
 })(Aufgabe06 || (Aufgabe06 = {}));
 //# sourceMappingURL=script.js.map

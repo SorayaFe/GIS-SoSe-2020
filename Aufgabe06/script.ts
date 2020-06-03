@@ -149,5 +149,4 @@
         let ueberschriftOreo: HTMLElement = <HTMLElement> document.getElementById("ueberschrift2");
         ueberschriftOreo.hidden = false;
     }
-    console.log("kjlkjl");
 }
