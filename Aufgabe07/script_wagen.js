@@ -42,8 +42,9 @@ var Aufgabe07;
             for (let i = 0; i < neueListe.length; i++) {
                 neueSumme = neueSumme + neueListe[i]._preis;
             }
+            let neueSummeRund = neueSumme.toLocaleString("de-DE", { "currency": "EUR", "style": "currency" });
             localStorage.removeItem("Summe");
-            localStorage.setItem("Summe", JSON.stringify(neueSumme));
+            localStorage.setItem("Summe", neueSummeRund);
             window.location.reload();
         }
     }

@@ -72,9 +72,10 @@ namespace Aufgabe07 {
                     let kreisDiv: HTMLElement = <HTMLElement>document.getElementById("kreisDiv");
 
                     let anzahl: number = counter.push(inhalt[i]._preis);
-                    
+
                     kreisDiv.innerHTML = "" + anzahl;
 
+                    //Gesamtpreis
                     let summe: number = 0;
                     for (let i: number = 0; i < counter.length; i++) {
                         summe = summe + counter[i];
@@ -82,34 +83,9 @@ namespace Aufgabe07 {
 
                     wagenListe.push(inhalt[i]);
 
-                    if (localStorage.getItem("Summe") == null) {
-                        localStorage.setItem("Summe", summe.toLocaleString("de-DE", { "currency": "EUR", "style": "currency" }));
-                    }
+                    localStorage.setItem("Artikel", JSON.stringify(wagenListe));
 
-                    if (window.localStorage.length == 0) {
-                        localStorage.setItem("Artikel", JSON.stringify(wagenListe));
-                        //localStorage.setItem("Summe", summe.toLocaleString("de-DE", { "currency": "EUR", "style": "currency" }));
-                    }
-
-                    else {
-                        let test: Artikel[] = JSON.parse(localStorage.getItem("Artikel")!);
-                        test.push(inhalt[i]);
-                        localStorage.setItem("Artikel", JSON.stringify(test));
-                    }
-
-                    //let kreisDiv: HTMLElement = <HTMLElement>document.getElementById("kreisDiv");
-
-                    //let anzahl: number = counter.push(inhalt[i]._preis);
-
-                    //kreisDiv.innerHTML = "" + anzahl;
-
-                    //Gesamtpreis
-                    /*let summe: number = 0;
-                    for (let i: number = 0; i < counter.length; i++) {
-                        summe = summe + counter[i];
-                    }*/
-
-                    //localStorage.setItem("Summe", summe.toLocaleString("de-DE", { "currency": "EUR", "style": "currency" }));
+                    localStorage.setItem("Summe", summe.toLocaleString("de-DE", { "currency": "EUR", "style": "currency" }));
                 }
             }
 
