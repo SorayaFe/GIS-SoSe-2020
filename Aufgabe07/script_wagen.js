@@ -49,7 +49,9 @@ var Aufgabe07;
     }
     //Gesamtpreis anzeigen
     let gesamtpreis = document.getElementById("gesamtpreis");
-    gesamtpreis.innerText = "Gesamtpreis: " + localStorage.getItem("Summe");
+    let summe = localStorage.getItem("Summe");
+    let gerundeteSumme = parseFloat(summe).toLocaleString("de-DE", { "currency": "EUR", "style": "currency" });
+    gesamtpreis.innerText = "Gesamtpreis: " + gerundeteSumme;
     //Konopf zum Einkaufswagen leeren
     let leeren = document.getElementById("leeren");
     leeren.addEventListener("click", handleLeeren);
