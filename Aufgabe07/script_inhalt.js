@@ -68,7 +68,7 @@ var Aufgabe07;
                     for (let i: number = 0; i < counter.length; i++) {
                         summe = summe + counter[i];
                     }*/
-                    localStorage.setItem("Summe", summe.toLocaleString("de-DE", { "currency": "EUR", "style": "currency" }));
+                    //localStorage.setItem("Summe", summe.toLocaleString("de-DE", { "currency": "EUR", "style": "currency" }));
                 }
             }
             else {

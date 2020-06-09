@@ -101,7 +101,7 @@ namespace Aufgabe07 {
                         summe = summe + counter[i];
                     }*/
 
-                    localStorage.setItem("Summe", summe.toLocaleString("de-DE", { "currency": "EUR", "style": "currency" }));
+                    //localStorage.setItem("Summe", summe.toLocaleString("de-DE", { "currency": "EUR", "style": "currency" }));
                 }
             }
 
