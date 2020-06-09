@@ -17,9 +17,9 @@ namespace Aufgabe07 {
     let counter: number[] = [];
 
     //Artikel von JSON laden
-    let rispo: HTMLElement = <HTMLElement> document.getElementById("rispo");
-    let kekse: HTMLElement = <HTMLElement> document.getElementById("kekse");
-    
+    let rispo: HTMLElement = <HTMLElement>document.getElementById("rispo");
+    let kekse: HTMLElement = <HTMLElement>document.getElementById("kekse");
+
     export async function ladeJson(_url: RequestInfo): Promise<void> {
         let response: Response = await fetch(_url);
         let inhalt: Artikel[] = await response.json();
@@ -27,7 +27,7 @@ namespace Aufgabe07 {
         for (let i: number = 0; i < inhalt.length; i++) {
             let divArtikel: HTMLElement = document.createElement("div");
             divArtikel.setAttribute("class", "artikel");
-        
+
             if (inhalt[i]._kategorie == "rispo") {
                 rispo.appendChild(divArtikel);
             }
@@ -69,10 +69,18 @@ namespace Aufgabe07 {
                 //Funktion für Knopf-Artikel-Counter und Preis außerdem zum Artikel in Einkaufwagen zufügen
                 function handleButton(): void {
 
+                    let anzahl: number = counter.push(inhalt[i]._preis);
+
+                    let summe: number = 0;
+                    for (let i: number = 0; i < counter.length; i++) {
+                        summe = summe + counter[i];
+                    }
+
                     wagenListe.push(inhalt[i]);
 
                     if (window.localStorage.length == 0) {
-                    localStorage.setItem("Artikel", JSON.stringify(wagenListe));
+                        localStorage.setItem("Artikel", JSON.stringify(wagenListe));
+                        localStorage.setItem("Summe", summe.toLocaleString("de-DE", { "currency": "EUR", "style": "currency" }));
                     }
 
                     else {
@@ -83,15 +91,15 @@ namespace Aufgabe07 {
 
                     let kreisDiv: HTMLElement = <HTMLElement>document.getElementById("kreisDiv");
 
-                    let anzahl: number = counter.push(inhalt[i]._preis);
+                    //let anzahl: number = counter.push(inhalt[i]._preis);
 
                     kreisDiv.innerHTML = "" + anzahl;
 
                     //Gesamtpreis
-                    let summe: number = 0;
+                    /*let summe: number = 0;
                     for (let i: number = 0; i < counter.length; i++) {
                         summe = summe + counter[i];
-                    }
+                    }*/
 
                     localStorage.setItem("Summe", summe.toLocaleString("de-DE", { "currency": "EUR", "style": "currency" }));
                 }

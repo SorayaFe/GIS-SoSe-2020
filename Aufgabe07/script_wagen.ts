@@ -63,8 +63,8 @@ namespace Aufgabe07 {
     //Gesamtpreis anzeigen
     let gesamtpreis: HTMLElement = <HTMLElement> document.getElementById("gesamtpreis");
     let summe: string = localStorage.getItem("Summe")!;
-    let gerundeteSumme: string = parseFloat(summe).toLocaleString("de-DE", { "currency": "EUR", "style": "currency" });
-    gesamtpreis.innerText = "Gesamtpreis: " + gerundeteSumme;
+    //let gerundeteSumme: string = parseFloat(summe).toLocaleString("de-DE", { "currency": "EUR", "style": "currency" });
+    gesamtpreis.innerText = "Gesamtpreis: " + summe;
 
     //Konopf zum Einkaufswagen leeren
     let leeren: HTMLElement = <HTMLElement> document.getElementById("leeren");
@@ -72,16 +72,9 @@ namespace Aufgabe07 {
 
     //Funktion zum Einkaufswagen leeren
     function handleLeeren(): void {
-
+        
         localStorage.clear();
         document.getElementById("wagenArtikel")?.remove();
-        gesamtpreis.innerText = "Gesamtpreis: 0.00 €";
+        gesamtpreis.innerText = "Gesamtpreis: 0,00 €";
     }
-
-    /*let home: HTMLElement = <HTMLElement> document.getElementById("home");
-    home.addEventListener("click", handleHome);
-
-    function handleHome(): void {
-        localStorage.setItem("Artikel", JSON.stringify(wagenListe));
-    }*/
 }

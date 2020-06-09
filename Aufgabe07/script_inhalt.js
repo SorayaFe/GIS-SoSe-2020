@@ -45,9 +45,15 @@ var Aufgabe07;
                 knopf.addEventListener("click", handleButton);
                 //Funktion für Knopf-Artikel-Counter und Preis außerdem zum Artikel in Einkaufwagen zufügen
                 function handleButton() {
+                    let anzahl = counter.push(inhalt[i]._preis);
+                    let summe = 0;
+                    for (let i = 0; i < counter.length; i++) {
+                        summe = summe + counter[i];
+                    }
                     wagenListe.push(inhalt[i]);
                     if (window.localStorage.length == 0) {
                         localStorage.setItem("Artikel", JSON.stringify(wagenListe));
+                        localStorage.setItem("Summe", summe.toLocaleString("de-DE", { "currency": "EUR", "style": "currency" }));
                     }
                     else {
                         let test = JSON.parse(localStorage.getItem("Artikel"));
@@ -55,13 +61,13 @@ var Aufgabe07;
                         localStorage.setItem("Artikel", JSON.stringify(test));
                     }
                     let kreisDiv = document.getElementById("kreisDiv");
-                    let anzahl = counter.push(inhalt[i]._preis);
+                    //let anzahl: number = counter.push(inhalt[i]._preis);
                     kreisDiv.innerHTML = "" + anzahl;
                     //Gesamtpreis
-                    let summe = 0;
-                    for (let i = 0; i < counter.length; i++) {
+                    /*let summe: number = 0;
+                    for (let i: number = 0; i < counter.length; i++) {
                         summe = summe + counter[i];
-                    }
+                    }*/
                     localStorage.setItem("Summe", summe.toLocaleString("de-DE", { "currency": "EUR", "style": "currency" }));
                 }
             }

@@ -50,8 +50,8 @@ var Aufgabe07;
     //Gesamtpreis anzeigen
     let gesamtpreis = document.getElementById("gesamtpreis");
     let summe = localStorage.getItem("Summe");
-    let gerundeteSumme = parseFloat(summe).toLocaleString("de-DE", { "currency": "EUR", "style": "currency" });
-    gesamtpreis.innerText = "Gesamtpreis: " + gerundeteSumme;
+    //let gerundeteSumme: string = parseFloat(summe).toLocaleString("de-DE", { "currency": "EUR", "style": "currency" });
+    gesamtpreis.innerText = "Gesamtpreis: " + summe;
     //Konopf zum Einkaufswagen leeren
     let leeren = document.getElementById("leeren");
     leeren.addEventListener("click", handleLeeren);
@@ -59,13 +59,7 @@ var Aufgabe07;
     function handleLeeren() {
         localStorage.clear();
         document.getElementById("wagenArtikel")?.remove();
-        gesamtpreis.innerText = "Gesamtpreis: 0.00 €";
+        gesamtpreis.innerText = "Gesamtpreis: 0,00 €";
     }
-    /*let home: HTMLElement = <HTMLElement> document.getElementById("home");
-    home.addEventListener("click", handleHome);
-
-    function handleHome(): void {
-        localStorage.setItem("Artikel", JSON.stringify(wagenListe));
-    }*/
 })(Aufgabe07 || (Aufgabe07 = {}));
 //# sourceMappingURL=script_wagen.js.map
