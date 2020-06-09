@@ -75,6 +75,12 @@ namespace Aufgabe07 {
                     localStorage.setItem("Artikel", JSON.stringify(wagenListe));
                     }
 
+                    else {
+                        let test: Artikel[] = JSON.parse(localStorage.getItem("Artikel")!);
+                        test.push(inhalt[i]);
+                        localStorage.setItem("Artikel", JSON.stringify(test));
+                    }
+
                     let kreisDiv: HTMLElement = <HTMLElement>document.getElementById("kreisDiv");
 
                     let anzahl: number = counter.push(inhalt[i]._preis);

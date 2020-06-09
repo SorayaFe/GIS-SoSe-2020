@@ -49,6 +49,11 @@ var Aufgabe07;
                     if (window.localStorage.length == 0) {
                         localStorage.setItem("Artikel", JSON.stringify(wagenListe));
                     }
+                    else {
+                        let test = JSON.parse(localStorage.getItem("Artikel"));
+                        test.push(inhalt[i]);
+                        localStorage.setItem("Artikel", JSON.stringify(test));
+                    }
                     let kreisDiv = document.getElementById("kreisDiv");
                     let anzahl = counter.push(inhalt[i]._preis);
                     kreisDiv.innerHTML = "" + anzahl;
