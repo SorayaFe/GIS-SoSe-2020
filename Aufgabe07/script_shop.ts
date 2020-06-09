@@ -1,6 +1,6 @@
 namespace Aufgabe07 {
 
-    ladeJson("http://sorayafe.github.io/GIS-SoSe-2020/Aufgabe07/daten.json");
+    ladeJson("https://sorayafe.github.io/GIS-SoSe-2020/Aufgabe07/daten.json");
 
     //Eventlistener für Menü
     let filterRispo: HTMLElement = <HTMLElement>document.getElementById("filterRispo");

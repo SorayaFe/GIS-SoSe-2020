@@ -1,7 +1,7 @@
 "use strict";
 var Aufgabe07;
 (function (Aufgabe07) {
-    Aufgabe07.ladeJson("http://sorayafe.github.io/GIS-SoSe-2020/Aufgabe07/daten.json");
+    Aufgabe07.ladeJson("https://sorayafe.github.io/GIS-SoSe-2020/Aufgabe07/daten.json");
     //Eventlistener für Menü
     let filterRispo = document.getElementById("filterRispo");
     filterRispo.addEventListener("click", handleRispo);
