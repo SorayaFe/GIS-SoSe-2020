@@ -75,5 +75,13 @@ namespace Aufgabe07 {
 
         localStorage.clear();
         document.getElementById("wagenArtikel")?.remove();
+        gesamtpreis.innerText = "0.00 €";
+    }
+
+    let home: HTMLElement = <HTMLElement> document.getElementById("home");
+    home.addEventListener("click", handleHome);
+
+    function handleHome(): void {
+        localStorage.setItem("Artikel", JSON.stringify(wagenListe));
     }
 }
