@@ -71,7 +71,9 @@ namespace Aufgabe07 {
 
                     wagenListe.push(inhalt[i]);
 
+                    if (window.localStorage.length == 0) {
                     localStorage.setItem("Artikel", JSON.stringify(wagenListe));
+                    }
 
                     let kreisDiv: HTMLElement = <HTMLElement>document.getElementById("kreisDiv");
 

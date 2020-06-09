@@ -46,7 +46,9 @@ var Aufgabe07;
                 //Funktion für Knopf-Artikel-Counter und Preis außerdem zum Artikel in Einkaufwagen zufügen
                 function handleButton() {
                     wagenListe.push(inhalt[i]);
-                    localStorage.setItem("Artikel", JSON.stringify(wagenListe));
+                    if (window.localStorage.length == 0) {
+                        localStorage.setItem("Artikel", JSON.stringify(wagenListe));
+                    }
                     let kreisDiv = document.getElementById("kreisDiv");
                     let anzahl = counter.push(inhalt[i]._preis);
                     kreisDiv.innerHTML = "" + anzahl;
