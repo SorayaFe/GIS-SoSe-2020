@@ -51,9 +51,12 @@ var Aufgabe07;
                         summe = summe + counter[i];
                     }
                     wagenListe.push(inhalt[i]);
+                    if (localStorage.getItem("Summe") == null) {
+                        localStorage.setItem("Summe", summe.toLocaleString("de-DE", { "currency": "EUR", "style": "currency" }));
+                    }
                     if (window.localStorage.length == 0) {
                         localStorage.setItem("Artikel", JSON.stringify(wagenListe));
-                        localStorage.setItem("Summe", summe.toLocaleString("de-DE", { "currency": "EUR", "style": "currency" }));
+                        //localStorage.setItem("Summe", summe.toLocaleString("de-DE", { "currency": "EUR", "style": "currency" }));
                     }
                     else {
                         let test = JSON.parse(localStorage.getItem("Artikel"));
