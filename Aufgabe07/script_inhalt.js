@@ -45,7 +45,9 @@ var Aufgabe07;
                 knopf.addEventListener("click", handleButton);
                 //Funktion für Knopf-Artikel-Counter und Preis außerdem zum Artikel in Einkaufwagen zufügen
                 function handleButton() {
+                    let kreisDiv = document.getElementById("kreisDiv");
                     let anzahl = counter.push(inhalt[i]._preis);
+                    kreisDiv.innerHTML = "" + anzahl;
                     let summe = 0;
                     for (let i = 0; i < counter.length; i++) {
                         summe = summe + counter[i];
@@ -63,9 +65,9 @@ var Aufgabe07;
                         test.push(inhalt[i]);
                         localStorage.setItem("Artikel", JSON.stringify(test));
                     }
-                    let kreisDiv = document.getElementById("kreisDiv");
+                    //let kreisDiv: HTMLElement = <HTMLElement>document.getElementById("kreisDiv");
                     //let anzahl: number = counter.push(inhalt[i]._preis);
-                    kreisDiv.innerHTML = "" + anzahl;
+                    //kreisDiv.innerHTML = "" + anzahl;
                     //Gesamtpreis
                     /*let summe: number = 0;
                     for (let i: number = 0; i < counter.length; i++) {

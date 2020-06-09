@@ -69,7 +69,11 @@ namespace Aufgabe07 {
                 //Funktion für Knopf-Artikel-Counter und Preis außerdem zum Artikel in Einkaufwagen zufügen
                 function handleButton(): void {
 
+                    let kreisDiv: HTMLElement = <HTMLElement>document.getElementById("kreisDiv");
+
                     let anzahl: number = counter.push(inhalt[i]._preis);
+                    
+                    kreisDiv.innerHTML = "" + anzahl;
 
                     let summe: number = 0;
                     for (let i: number = 0; i < counter.length; i++) {
@@ -93,11 +97,11 @@ namespace Aufgabe07 {
                         localStorage.setItem("Artikel", JSON.stringify(test));
                     }
 
-                    let kreisDiv: HTMLElement = <HTMLElement>document.getElementById("kreisDiv");
+                    //let kreisDiv: HTMLElement = <HTMLElement>document.getElementById("kreisDiv");
 
                     //let anzahl: number = counter.push(inhalt[i]._preis);
 
-                    kreisDiv.innerHTML = "" + anzahl;
+                    //kreisDiv.innerHTML = "" + anzahl;
 
                     //Gesamtpreis
                     /*let summe: number = 0;
