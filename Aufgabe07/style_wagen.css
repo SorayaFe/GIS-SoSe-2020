@@ -1,0 +1,95 @@
+@font-face {
+    font-family: meineschriftart;
+    src: url(merienda/Merienda-Regular.ttf)
+}
+
+body{
+    font-family: meineschriftart;
+    background-image: url(bilder/candy-background.jpg);
+}
+
+h1 {
+    color: purple;
+}
+
+.artikel {
+    width: 20%;
+    height: 400px;
+    text-align: center;
+    margin-top: 4%;
+    padding-top: 2%;
+    padding-bottom: 5%;
+    border-style: solid;
+    border-color: purple;
+    border: 1;
+    float: left;
+}
+
+@media screen and (max-width: 600px){
+    .artikel {
+        width: 90%;
+        height: 450px;
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 1025px){
+    .artikel {
+        width: 40%;
+        height: 400px;
+    }
+}
+
+@media screen and (min-width: 1900px){
+    .artikel{
+        padding-bottom: 7%;
+    }
+}
+
+.bild {
+    max-width: 80%;
+}
+
+#wagenArtikel {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.preis {
+    font-size: 175%;
+    color: rgb(231, 64, 100);
+}
+
+#gesamtpreis {
+    font-size: 200%;
+    color: red;
+}
+
+.entfernen {
+    cursor: pointer;
+    font-size: 100%;
+    background-color: rgb(231, 106, 106);
+    border-radius: 20px;
+}
+
+#leeren {
+    cursor: pointer;
+    font-size: 150%;
+    background-color: white;
+    border-radius: 20px;
+}
+
+ul {
+    display: inline;
+}
+
+ul img {
+    width: 10%;
+    left: 0;
+}
+
+ul a {
+    text-decoration: none;
+    color: black;
+    font-size: 400%;
+    cursor: pointer;
+}
