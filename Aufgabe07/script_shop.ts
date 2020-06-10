@@ -73,7 +73,7 @@ namespace Aufgabe07 {
 
                     counter.push(inhalt[i]._preis);
                     
-                    let anzahl: number = wagenListe.length;
+                    let anzahl: number = wagenListe.length + 1;
 
                     kreisDiv.innerHTML = "" + anzahl;
 
