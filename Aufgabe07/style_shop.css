@@ -259,7 +259,8 @@ footer {
 
 @media screen and (max-width: 600px) {
     #box {
-        width: 50%;
+        width: 60%;
+        height: 45px;
     }
 }
 

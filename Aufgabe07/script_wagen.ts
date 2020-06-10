@@ -66,7 +66,6 @@ namespace Aufgabe07 {
     //Gesamtpreis anzeigen
     let gesamtpreis: HTMLElement = <HTMLElement> document.getElementById("gesamtpreis");
     let summe: string = localStorage.getItem("Summe")!;
-    //let gerundeteSumme: string = parseFloat(summe).toLocaleString("de-DE", { "currency": "EUR", "style": "currency" });
     gesamtpreis.innerText = "Gesamtpreis: " + summe;
 
     //Konopf zum Einkaufswagen leeren

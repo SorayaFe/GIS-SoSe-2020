@@ -51,7 +51,6 @@ var Aufgabe07;
     //Gesamtpreis anzeigen
     let gesamtpreis = document.getElementById("gesamtpreis");
     let summe = localStorage.getItem("Summe");
-    //let gerundeteSumme: string = parseFloat(summe).toLocaleString("de-DE", { "currency": "EUR", "style": "currency" });
     gesamtpreis.innerText = "Gesamtpreis: " + summe;
     //Konopf zum Einkaufswagen leeren
     let leeren = document.getElementById("leeren");
