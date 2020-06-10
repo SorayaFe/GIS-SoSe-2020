@@ -73,7 +73,9 @@ namespace Aufgabe07 {
 
                     counter.push(inhalt[i]._preis);
                     
-                    let anzahl: number = wagenListe.length + 1;
+                    wagenListe.push(inhalt[i]);
+                    
+                    let anzahl: number = wagenListe.length;
 
                     kreisDiv.innerHTML = "" + anzahl;
 
@@ -82,8 +84,6 @@ namespace Aufgabe07 {
                     for (let i: number = 0; i < counter.length; i++) {
                         summe = summe + counter[i];
                     }
-
-                    wagenListe.push(inhalt[i]);
 
                     localStorage.setItem("Artikel", JSON.stringify(wagenListe));
 

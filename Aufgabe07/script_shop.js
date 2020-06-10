@@ -55,6 +55,7 @@ var Aufgabe07;
                 function handleButton() {
                     let kreisDiv = document.getElementById("kreisDiv");
                     counter.push(inhalt[i]._preis);
+                    wagenListe.push(inhalt[i]);
                     let anzahl = wagenListe.length;
                     kreisDiv.innerHTML = "" + anzahl;
                     //Gesamtpreis
@@ -62,7 +63,6 @@ var Aufgabe07;
                     for (let i = 0; i < counter.length; i++) {
                         summe = summe + counter[i];
                     }
-                    wagenListe.push(inhalt[i]);
                     localStorage.setItem("Artikel", JSON.stringify(wagenListe));
                     localStorage.setItem("Summe", summe.toLocaleString("de-DE", { "currency": "EUR", "style": "currency" }));
                 }
