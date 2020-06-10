@@ -262,3 +262,17 @@ footer {
         width: 50%;
     }
 }
+
+@media screen and (max-height: 415px) {
+    #box {
+        height: 35%;
+        width: 60%;
+    }
+}
+
+@media screen and (min-width: 1900px){
+    #box{
+        width: 40%;
+    }
+}
+
