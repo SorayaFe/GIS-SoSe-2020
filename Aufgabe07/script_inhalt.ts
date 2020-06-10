@@ -13,9 +13,20 @@ namespace Aufgabe07 {
     //Liste für Einkaufswagen
     let wagenListe: Artikel[] = [];
 
+    if (localStorage.getItem("Artikel") != null) {
+        let neueWagenListe: Artikel[] = JSON.parse(localStorage.getItem("Artikel")!);
+        wagenListe = neueWagenListe;
+    }
+
     //Counter für Anzahl der Artikel
     let counter: number[] = [];
 
+    if (localStorage.getItem("Summe") != null) {
+        let neuerCounter: number = parseFloat(localStorage.getItem("Summe")!);
+        counter[0] = neuerCounter;
+        //for (let i: number = 0; i < neuerCounter.length; i++) 
+    }
+    
     //Artikel von JSON laden
     let rispo: HTMLElement = <HTMLElement>document.getElementById("rispo");
     let kekse: HTMLElement = <HTMLElement>document.getElementById("kekse");

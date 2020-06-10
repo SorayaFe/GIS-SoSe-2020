@@ -3,8 +3,17 @@ var Aufgabe07;
 (function (Aufgabe07) {
     //Liste für Einkaufswagen
     let wagenListe = [];
+    if (localStorage.getItem("Artikel") != null) {
+        let neueWagenListe = JSON.parse(localStorage.getItem("Artikel"));
+        wagenListe = neueWagenListe;
+    }
     //Counter für Anzahl der Artikel
     let counter = [];
+    if (localStorage.getItem("Summe") != null) {
+        let neuerCounter = parseFloat(localStorage.getItem("Summe"));
+        counter[0] = neuerCounter;
+        //for (let i: number = 0; i < neuerCounter.length; i++) 
+    }
     //Artikel von JSON laden
     let rispo = document.getElementById("rispo");
     let kekse = document.getElementById("kekse");
