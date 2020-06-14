@@ -189,6 +189,9 @@ h1 {
     .artikel{
         padding-bottom: 7%;
     }
+    .menu {
+        margin-top: -700px;
+    }
 }
 
 .gibt {
@@ -273,7 +276,7 @@ footer {
 
 @media screen and (min-width: 1900px){
     #box{
-        width: 40%;
+        width: 30%;
     }
 }
 

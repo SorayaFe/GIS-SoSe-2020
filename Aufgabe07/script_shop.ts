@@ -1,4 +1,4 @@
-namespace Aufgabe07 {
+ namespace Aufgabe07 {
 
     //Liste für Einkaufswagen
     let wagenListe: Artikel[] = [];
@@ -99,7 +99,7 @@ namespace Aufgabe07 {
         }
     }
 
-    ladeJson("https://sorayafe.github.io/GIS-SoSe-2020/Aufgabe07/daten.json");
+    ladeJson("daten.json");
 
     //Eventlistener für Menü
     let filterRispo: HTMLElement = <HTMLElement>document.getElementById("filterRispo");
