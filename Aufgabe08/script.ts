@@ -1,28 +1,28 @@
-import * as Http from "http";
+ namespace Aufgabe08 {
 
-export namespace A08Server {
-    console.log("Starting server");
-    let port: number = Number(process.env.PORT);
-    if (!port)
-        port = 8100;
+    let senden: HTMLElement = <HTMLElement>document.getElementById("senden");
+    senden?.addEventListener("click", handleSenden);
 
-    let server: Http.Server = Http.createServer();
-    server.addListener("request", handleRequest);
-    server.addListener("listening", handleListen);
-    server.listen(port);
+    let formData: FormData;
 
-    function handleListen(): void {
-        console.log("Listening");
+    async function handleSenden(): Promise<void> {
+        funktion(await funktion2());
     }
 
-    function handleRequest(_request: Http.IncomingMessage, _response: Http.ServerResponse): void {
-        console.log("I hear voices!");
+    async function funktion2(): Promise<string> {
 
-        _response.setHeader("content-type", "text/html; charset=utf-8");
-        _response.setHeader("Access-Control-Allow-Origin", "*");
+     formData = new FormData(document.forms[0]);
+     let url: string = "https://gispraktikum2020.herokuapp.com/";
+     let query: URLSearchParams = new URLSearchParams(<any>formData);
+     url = url + "?" + query.toString();
+     return url;
+    }
 
-        _response.write(_request.url);
+    async function funktion(url: RequestInfo): Promise<void> {
+    
+    let antwort: Response = await fetch(url);
+    let kjll: string = await antwort.text();
+    console.log(kjll);
 
-        _response.end();
     }
 }

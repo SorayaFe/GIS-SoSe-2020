@@ -1,26 +1,23 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.A08Server = void 0;
-const Http = require("http");
-var A08Server;
-(function (A08Server) {
-    console.log("Starting server");
-    let port = Number(process.env.PORT);
-    if (!port)
-        port = 8100;
-    let server = Http.createServer();
-    server.addListener("request", handleRequest);
-    server.addListener("listening", handleListen);
-    server.listen(port);
-    function handleListen() {
-        console.log("Listening");
+var Aufgabe08;
+(function (Aufgabe08) {
+    let senden = document.getElementById("senden");
+    senden?.addEventListener("click", handleSenden);
+    let formData;
+    async function handleSenden() {
+        funktion(await funktion2());
     }
-    function handleRequest(_request, _response) {
-        console.log("I hear voices!");
-        _response.setHeader("content-type", "text/html; charset=utf-8");
-        _response.setHeader("Access-Control-Allow-Origin", "*");
-        _response.write(_request.url);
-        _response.end();
+    async function funktion2() {
+        formData = new FormData(document.forms[0]);
+        let url = "https://gispraktikum2020.herokuapp.com/";
+        let query = new URLSearchParams(formData);
+        url = url + "?" + query.toString();
+        return url;
     }
-})(A08Server = exports.A08Server || (exports.A08Server = {}));
+    async function funktion(url) {
+        let antwort = await fetch(url);
+        let kjll = await antwort.text();
+        console.log(kjll);
+    }
+})(Aufgabe08 || (Aufgabe08 = {}));
 //# sourceMappingURL=script.js.map
