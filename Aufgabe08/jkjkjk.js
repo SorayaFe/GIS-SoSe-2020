@@ -5,13 +5,13 @@ var Aufgabe08;
     senden?.addEventListener("click", handleSenden);
     async function handleSenden() {
         let formData = new FormData(document.forms[0]);
+        let url = "https://gispraktikum2020.herokuapp.com/";
         // tslint:disable-next-line: no-any
         let query = new URLSearchParams(formData);
-        let url = "https://gispraktikum2020.herokuapp.com/";
         url = url + "?" + query.toString();
         let antwort = await fetch(url);
-        let antwort2 = antwort.url;
-        console.log(antwort2);
+        let lkjlj = antwort.url;
+        console.log(lkjlj);
         for (let entry of query) {
             console.log(entry);
             console.log("name: " + entry[0]);
@@ -19,4 +19,4 @@ var Aufgabe08;
         }
     }
 })(Aufgabe08 || (Aufgabe08 = {}));
-//# sourceMappingURL=script.js.map
+//# sourceMappingURL=jkjkjk.js.map
