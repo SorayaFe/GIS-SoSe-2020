@@ -77,7 +77,7 @@ body{
 
 @media screen and (min-width: 600px) and (max-width: 1024px){
     .wagen {
-        margin-top: -575px;
+        margin-top: -450px;
         padding-bottom: 600px;
     }
     #kreisDiv {
@@ -89,6 +89,12 @@ body{
 @media screen and (max-height: 415px) {
     .wagen {
         margin-top: -575px;
+    }
+}
+
+@media screen and (min-width: 1900px){
+    .wagen {
+        right: 10px;
     }
 }
 
@@ -120,7 +126,7 @@ body{
 
 @media screen and (min-width: 600px) and (max-width: 1024px){
     .menu {
-        margin-top: -640px;
+        margin-top: -650px;
         padding-bottom: 600px;
     }
 }
@@ -190,7 +196,7 @@ h1 {
         padding-bottom: 7%;
     }
     .menu {
-        margin-top: -700px;
+        margin-top: -600px;
     }
 }
 
@@ -276,7 +282,14 @@ footer {
 
 @media screen and (min-width: 1900px){
     #box{
-        width: 30%;
+        width: 25%;
+        z-index: 10;
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 1025px){
+    #box {
+        width: 45%;
     }
 }
 
