@@ -48,7 +48,7 @@ export namespace Aufgabe08 {
                     _response.write(key + ": " + q.query[key] + "<br/>");
                 }
             }
-            if (q.pathname == "/json") {
+            else if (q.pathname == "/json") {
 
                 let jsonString: string = JSON.stringify(q.query);
                 _response.write(jsonString);
