@@ -10,6 +10,7 @@ var Aufgabe09;
         // tslint:disable-next-line: no-any
         let query = new URLSearchParams(formData);
         let url = "https://gispraktikum2020.herokuapp.com/";
+        url = url + "/html";
         url = url + "?" + query.toString();
         let antwort = await fetch(url);
         let antwort2 = await antwort.text();

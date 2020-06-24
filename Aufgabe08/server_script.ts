@@ -41,14 +41,18 @@ export namespace Aufgabe08 {
 
             let q: url.UrlWithParsedQuery = url.parse(_request.url, true);
 
-            for (let key in q.query) {
+            if (q.pathname == "/html") {
 
-                _response.write(key + ":" + q.query[key] + "</br>");
+                for (let key in q.query) {
+
+                    _response.write(key + ": " + q.query[key] + "</br>");
+                }
             }
+            else {
 
-            let jsonString: string = JSON.stringify(q.query);
-            _response.write(jsonString);
-            
+                let jsonString: string = JSON.stringify(q.query);
+                _response.write(jsonString);
+            }
         }
         _response.end();
     }

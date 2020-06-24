@@ -31,11 +31,15 @@ var Aufgabe08;
         _response.write(_request.url);
         if (_request.url) {
             let q = url.parse(_request.url, true);
-            for (let key in q.query) {
-                _response.write(key + ":" + q.query[key] + "</br>");
+            if (q.pathname == "/html") {
+                for (let key in q.query) {
+                    _response.write(key + ": " + q.query[key] + "</br>");
+                }
             }
-            let jsonString = JSON.stringify(q.query);
-            _response.write(jsonString);
+            else {
+                let jsonString = JSON.stringify(q.query);
+                _response.write(jsonString);
+            }
         }
         _response.end();
     }
