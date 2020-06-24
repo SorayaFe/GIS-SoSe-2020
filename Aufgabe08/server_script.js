@@ -28,7 +28,7 @@ var Aufgabe08;
         _response.setHeader("Access-Control-Allow-Origin", "*");
         //hinweis dass es eine request gibt wird ausgegeben
         console.log("I hear voices!");
-        _response.write(_request.url);
+        //_response.write(_request.url);
         if (_request.url) {
             let q = url.parse(_request.url, true);
             if (q.pathname == "/html") {

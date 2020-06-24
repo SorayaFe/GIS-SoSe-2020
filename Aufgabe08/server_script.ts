@@ -35,7 +35,7 @@ export namespace Aufgabe08 {
         //hinweis dass es eine request gibt wird ausgegeben
         console.log("I hear voices!");
 
-        _response.write(_request.url);
+        //_response.write(_request.url);
 
         if (_request.url) {
 
