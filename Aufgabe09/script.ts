@@ -14,7 +14,7 @@ namespace Aufgabe09 {
         let query: URLSearchParams = new URLSearchParams(<any>formData);
         
         let url: string = "https://gispraktikum2020.herokuapp.com/";
-        url = url + "/html";
+        url = url + "html";
         url = url + "?" + query.toString();
 
         let antwort: Response = await fetch(url);
