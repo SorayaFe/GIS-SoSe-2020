@@ -45,7 +45,7 @@ export namespace Aufgabe08 {
 
                 for (let key in q.query) {
 
-                    _response.write(key + ": " + q.query[key] + "</br>");
+                    _response.write(key + ": " + q.query[key] + "<br/>");
                 }
             }
             else {
