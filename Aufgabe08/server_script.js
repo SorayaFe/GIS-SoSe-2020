@@ -34,14 +34,15 @@ var Aufgabe08;
             if (q.pathname == "/html") {
                 for (let key in q.query) {
                     _response.write(key + ": " + q.query[key] + "<br/>");
+                    _response.end();
                 }
             }
             if (q.pathname == "/json") {
                 let jsonString = JSON.stringify(q.query);
                 _response.write(jsonString);
+                _response.end();
             }
         }
-        _response.end();
     }
 })(Aufgabe08 = exports.Aufgabe08 || (exports.Aufgabe08 = {}));
 //# sourceMappingURL=server_script.js.map

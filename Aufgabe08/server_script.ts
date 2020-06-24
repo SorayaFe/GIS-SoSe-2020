@@ -46,14 +46,16 @@ export namespace Aufgabe08 {
                 for (let key in q.query) {
 
                     _response.write(key + ": " + q.query[key] + "<br/>");
+                    _response.end();
                 }
             }
             if (q.pathname == "/json") {
 
                 let jsonString: string = JSON.stringify(q.query);
                 _response.write(jsonString);
+                _response.end();
             }
         }
-        _response.end();
+        
     }
 }
