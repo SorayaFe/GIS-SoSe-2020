@@ -36,7 +36,7 @@ var Aufgabe08;
                     _response.write(key + ": " + q.query[key] + "<br/>");
                 }
             }
-            else {
+            if (q.pathname == "/json") {
                 let jsonString = JSON.stringify(q.query);
                 _response.write(jsonString);
             }

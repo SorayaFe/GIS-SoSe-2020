@@ -13,8 +13,8 @@ namespace Aufgabe09 {
         // tslint:disable-next-line: no-any
         let query: URLSearchParams = new URLSearchParams(<any>formData);
         
-        let url: string = "https://gispraktikum2020.herokuapp.com/";
-        url = url + "html";
+        let url: string = "https://gispraktikum2020.herokuapp.com";
+        url = url + "/html";
         url = url + "?" + query.toString();
 
         let antwort: Response = await fetch(url);
@@ -31,8 +31,8 @@ namespace Aufgabe09 {
         let query: URLSearchParams = new URLSearchParams(<any>formData);
         
         let url: string = "https://gispraktikum2020.herokuapp.com/";
-
         url = url + "?" + query.toString();
+        url = url + "/json";
 
         let antwort: Response = await fetch(url);
         let antwort2: string = await antwort.json();
