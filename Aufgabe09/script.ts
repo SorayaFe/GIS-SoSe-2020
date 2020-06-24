@@ -6,9 +6,11 @@ namespace Aufgabe09 {
     let jsonButton: HTMLElement = <HTMLElement>document.getElementById("json");
     jsonButton?.addEventListener("click", handleJsonButton);
 
+    let formData: FormData;
+
     async function handleHtmlButton(): Promise<void> {
 
-        let formData: FormData = new FormData(document.forms[0]);
+        formData = new FormData(document.forms[0]);
 
         // tslint:disable-next-line: no-any
         let query: URLSearchParams = new URLSearchParams(<any>formData);
@@ -25,7 +27,7 @@ namespace Aufgabe09 {
 
     async function handleJsonButton(): Promise<void> {
 
-        let formData: FormData = new FormData(document.forms[0]);
+        formData = new FormData(document.forms[0]);
 
         // tslint:disable-next-line: no-any
         let query: URLSearchParams = new URLSearchParams(<any>formData);

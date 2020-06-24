@@ -5,8 +5,9 @@ var Aufgabe09;
     htmlButton?.addEventListener("click", handleHtmlButton);
     let jsonButton = document.getElementById("json");
     jsonButton?.addEventListener("click", handleJsonButton);
+    let formData;
     async function handleHtmlButton() {
-        let formData = new FormData(document.forms[0]);
+        formData = new FormData(document.forms[0]);
         // tslint:disable-next-line: no-any
         let query = new URLSearchParams(formData);
         let url = "https://gispraktikum2020.herokuapp.com";
@@ -18,7 +19,7 @@ var Aufgabe09;
         antwortHTML.innerHTML = antwort2;
     }
     async function handleJsonButton() {
-        let formData = new FormData(document.forms[0]);
+        formData = new FormData(document.forms[0]);
         // tslint:disable-next-line: no-any
         let query = new URLSearchParams(formData);
         let url = "https://gispraktikum2020.herokuapp.com/";
