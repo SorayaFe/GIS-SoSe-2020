@@ -1,5 +1,6 @@
 //das module http wird (mit aller funktoinalität) geladen und wird einer variable zugewiesen
 import * as Http from "http";
+import * as url from "url";
 
 export namespace Aufgabe08 {
 
@@ -7,7 +8,7 @@ export namespace Aufgabe08 {
     let port: number = Number(process.env.PORT);
     if (!port)
         port = 8100;
- 
+
     //server wird erstellt
     let server: Http.Server = Http.createServer();
 
@@ -27,16 +28,23 @@ export namespace Aufgabe08 {
 
     //function wird aufgerufen wenn es eine request gibt
     function handleRequest(_request: Http.IncomingMessage, _response: Http.ServerResponse): void {
-        
-        //hinweis dass es eine request gibt wird ausgegeben
-        console.log("I hear voices!");
 
         _response.setHeader("content-type", "text/html; charset=utf-8");
         _response.setHeader("Access-Control-Allow-Origin", "*");
 
+        //hinweis dass es eine request gibt wird ausgegeben
+        console.log("I hear voices!");
+
         _response.write(_request.url);
+        //_response.end();
 
+        if (_request.url) {
+
+            let q: url.UrlWithParsedQuery = url.parse(_request.url, true);
+            let jsonString: string = JSON.stringify(q.query);
+            _response.write(jsonString);
+            
+        }
         _response.end();
-
     }
 }

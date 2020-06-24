@@ -95,3 +95,7 @@ ul a {
     font-size: 400%;
     cursor: pointer;
 }
+
+li {
+    list-style: none;
+}

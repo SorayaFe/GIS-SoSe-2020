@@ -3,6 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.Aufgabe08 = void 0;
 //das module http wird (mit aller funktoinalität) geladen und wird einer variable zugewiesen
 const Http = require("http");
+const url = require("url");
 var Aufgabe08;
 (function (Aufgabe08) {
     console.log("Starting server");
@@ -23,12 +24,18 @@ var Aufgabe08;
     }
     //function wird aufgerufen wenn es eine request gibt
     function handleRequest(_request, _response) {
-        //hinweis dass es eine request gibt wird ausgegeben
-        console.log("I hear voices!");
         _response.setHeader("content-type", "text/html; charset=utf-8");
         _response.setHeader("Access-Control-Allow-Origin", "*");
+        //hinweis dass es eine request gibt wird ausgegeben
+        console.log("I hear voices!");
         _response.write(_request.url);
-        _response.end();
+        //_response.end();
+        if (_request.url) {
+            let q = url.parse(_request.url, true);
+            let jsonString = JSON.stringify(q.query);
+            _response.write(jsonString);
+            _response.end();
+        }
     }
 })(Aufgabe08 = exports.Aufgabe08 || (exports.Aufgabe08 = {}));
 //# sourceMappingURL=server_script.js.map
