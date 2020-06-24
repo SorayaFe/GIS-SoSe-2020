@@ -6,7 +6,7 @@ namespace Aufgabe09 {
     let jsonButton: HTMLElement = <HTMLElement>document.getElementById("json");
     jsonButton?.addEventListener("click", handleJsonButton);
 
-    async function handleHtmlButton(): Promise<void>{
+    async function handleHtmlButton(): Promise<void> {
 
         let formData: FormData = new FormData(document.forms[0]);
 
@@ -23,7 +23,7 @@ namespace Aufgabe09 {
         antwortHTML.innerHTML = antwort2;
     }
 
-    async function handleJsonButton(): Promise<void>{
+    async function handleJsonButton(): Promise<void> {
 
         let formData: FormData = new FormData(document.forms[0]);
 
