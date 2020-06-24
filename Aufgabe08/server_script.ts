@@ -36,11 +36,16 @@ export namespace Aufgabe08 {
         console.log("I hear voices!");
 
         _response.write(_request.url);
-        //_response.end();
 
         if (_request.url) {
 
             let q: url.UrlWithParsedQuery = url.parse(_request.url, true);
+
+            for (let key in q.query){
+
+                _response.write(key + ":" + q.query[key] + "</br>");
+            }
+
             let jsonString: string = JSON.stringify(q.query);
             _response.write(jsonString);
             
