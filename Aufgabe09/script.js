@@ -22,9 +22,9 @@ var Aufgabe09;
         formData = new FormData(document.forms[0]);
         // tslint:disable-next-line: no-any
         let query = new URLSearchParams(formData);
-        let url = "https://gispraktikum2020.herokuapp.com/";
-        url = url + "?" + query.toString();
+        let url = "https://gispraktikum2020.herokuapp.com";
         url = url + "/json";
+        url = url + "?" + query.toString();
         let antwort = await fetch(url);
         let antwort2 = await antwort.json();
         console.log(antwort2);
