@@ -68,8 +68,21 @@ export namespace Aufgabe11 {
             }
 
             else if (q.pathname == "/abfragen") {
+                
+                //tslint:disable-next-line: no-any
+                let ergebnis: any[] = await antworten.find().toArray();
+                //let ausgabe: string = "";
+                /*for (let i: number = 0; i < ergebnis.length; i++) {
 
-                _response.write(JSON.stringify(await antworten.find().toArray()));
+                    _response.write(ergebnis[i] + "<br(>");
+                }*/
+
+                for (let key in ergebnis) {
+
+                    _response.write(key + ": " + ergebnis[key] + "<br/>");
+                }
+
+                //_response.write(JSON.stringify(await antworten.find().toArray()));
             }
         }
         _response.end();

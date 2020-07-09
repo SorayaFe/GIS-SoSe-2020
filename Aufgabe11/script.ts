@@ -19,6 +19,9 @@ namespace Aufgabe11 {
         url = url + "?" + query.toString();
 
         await fetch(url);
+
+        let formular: HTMLFormElement = <HTMLFormElement>document.getElementById("formular");
+        formular.reset();
     }
 
     async function handleAbfragen(): Promise<void> {

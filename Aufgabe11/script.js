@@ -14,6 +14,8 @@ var Aufgabe11;
         url = url + "/versenden";
         url = url + "?" + query.toString();
         await fetch(url);
+        let formular = document.getElementById("formular");
+        formular.reset();
     }
     async function handleAbfragen() {
         let formData = new FormData(document.forms[0]);

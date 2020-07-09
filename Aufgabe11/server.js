@@ -43,7 +43,17 @@ var Aufgabe11;
                 storeAntworten(q.query);
             }
             else if (q.pathname == "/abfragen") {
-                _response.write(JSON.stringify(await antworten.find().toArray()));
+                //tslint:disable-next-line: no-any
+                let ergebnis = await antworten.find().toArray();
+                //let ausgabe: string = "";
+                /*for (let i: number = 0; i < ergebnis.length; i++) {
+
+                    _response.write(ergebnis[i] + "<br(>");
+                }*/
+                for (let key in ergebnis) {
+                    _response.write(key + ": " + ergebnis[key] + "<br/>");
+                }
+                //_response.write(JSON.stringify(await antworten.find().toArray()));
             }
         }
         _response.end();
