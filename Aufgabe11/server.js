@@ -38,8 +38,8 @@ var Aufgabe11;
         if (_request.url) {
             let q = url.parse(_request.url, true);
             if (q.pathname == "/versenden") {
-                let jsonString = JSON.stringify(q.query);
-                _response.write(jsonString);
+                /*let jsonString: string = JSON.stringify(q.query);
+                _response.write(jsonString);*/
                 storeAntworten(q.query);
             }
             else if (q.pathname == "/abfragen") {
@@ -53,7 +53,6 @@ var Aufgabe11;
             }
             else if (q.pathname == "/leeren") {
                 antworten.remove({});
-                _response.write("Geleert");
             }
         }
         _response.end();

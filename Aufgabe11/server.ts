@@ -61,8 +61,8 @@ export namespace Aufgabe11 {
 
             if (q.pathname == "/versenden") {
 
-                let jsonString: string = JSON.stringify(q.query);
-                _response.write(jsonString);
+                /*let jsonString: string = JSON.stringify(q.query);
+                _response.write(jsonString);*/
 
                 storeAntworten(<Antwort>q.query);
             }
@@ -85,7 +85,6 @@ export namespace Aufgabe11 {
             else if (q.pathname == "/leeren") {
 
                 antworten.remove({});
-                _response.write("Geleert");
             }
         }
         _response.end();

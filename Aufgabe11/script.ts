@@ -53,8 +53,7 @@ namespace Aufgabe11 {
         url = url + "/leeren";
         url = url + "?" + query.toString();
 
-        let antwort: Response = await fetch(url);
-        let antwort2: string = await antwort.text();
-        serverAntwort.innerHTML = antwort2;
+        await fetch(url);
+        serverAntwort.innerHTML = "Geleert";
     }
 }
