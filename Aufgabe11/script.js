@@ -37,7 +37,9 @@ var Aufgabe11;
         let url = "https://gispraktikum2020.herokuapp.com";
         url = url + "/leeren";
         url = url + "?" + query.toString();
-        await fetch(url);
+        let antwort = await fetch(url);
+        let antwort2 = await antwort.text();
+        serverAntwort.innerHTML = antwort2;
     }
 })(Aufgabe11 || (Aufgabe11 = {}));
 //# sourceMappingURL=script.js.map
