@@ -44,4 +44,6 @@ var Aufgabe08;
         _response.end();
     }
 })(Aufgabe08 = exports.Aufgabe08 || (exports.Aufgabe08 = {}));
+//mongodb+srv://Testuser:<password>@soraya.qpkye.mongodb.net/<dbname>?retryWrites=true&w=majority
+//mongodbnetbrowser.herokuapp.com/?u=Testuser&p=mfkpe12tp&a=soraya.qpkye.mongodb.net&n=Test&c=Students
 //# sourceMappingURL=server_script.js.map
