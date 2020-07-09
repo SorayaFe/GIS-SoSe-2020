@@ -16,19 +16,19 @@ export namespace Aufgabe11 {
     if (!port) {
         port = 8100;
     }
-        
-    
+
+
     function startServer(_port: number): void {
 
-    console.log("Starting server");
-    
-    let server: Http.Server = Http.createServer();
+        console.log("Starting server");
 
-    server.addListener("request", handleRequest);
-    server.addListener("listening", handleListen);
+        let server: Http.Server = Http.createServer();
 
-    server.listen(_port);
-}
+        server.addListener("request", handleRequest);
+        server.addListener("listening", handleListen);
+
+        server.listen(_port);
+    }
 
     function handleListen(): void {
 
@@ -39,8 +39,8 @@ export namespace Aufgabe11 {
     connectToDatabase(databaseUrl);
 
     async function connectToDatabase(_url: string): Promise<void> {
-        
-        let options: Mongo.MongoClientOptions = {useNewUrlParser: true, useUnifiedTopology: true};
+
+        let options: Mongo.MongoClientOptions = { useNewUrlParser: true, useUnifiedTopology: true };
         let mongoClient: Mongo.MongoClient = new Mongo.MongoClient(_url, options);
         await mongoClient.connect();
 
@@ -61,25 +61,25 @@ export namespace Aufgabe11 {
 
             if (q.pathname == "/versenden") {
 
-            let jsonString: string = JSON.stringify(q.query);
-            _response.write(jsonString);
+                let jsonString: string = JSON.stringify(q.query);
+                _response.write(jsonString);
 
-            storeAntworten(<Antwort>q.query);
+                storeAntworten(<Antwort>q.query);
             }
 
             else if (q.pathname == "/abfragen") {
-                
+
                 //tslint:disable-next-line: no-any
-                let ergebnis: any[] = await antworten.find().toArray();
+                let ergebnis: Antwort[] = await antworten.find().toArray();
                 //let ausgabe: string = "";
-                /*for (let i: number = 0; i < ergebnis.length; i++) {
+                for (let i: number = 0; i < ergebnis.length; i++) {
 
-                    _response.write(ergebnis[i] + "<br(>");
-                }*/
+                    let feld: Antwort = ergebnis[i];
 
-                for (let key in ergebnis) {
+                    for (let key in feld) {
 
-                    _response.write(key + ": " + ergebnis[key] + "<br/>");
+                        _response.write(key + ": " + feld[key] + "<br/>");
+                    }
                 }
 
                 //_response.write(JSON.stringify(await antworten.find().toArray()));
