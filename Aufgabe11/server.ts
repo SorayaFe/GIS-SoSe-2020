@@ -80,11 +80,13 @@ export namespace Aufgabe11 {
                         _response.write(key + ": " + feld[key] + "<br/>");
                     }
                 }
+                _response.write("<br/>");
             }
 
             else if (q.pathname == "/leeren") {
 
                 antworten.remove({});
+                _response.write("Geleert");
             }
         }
         _response.end();
