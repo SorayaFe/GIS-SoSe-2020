@@ -13,6 +13,7 @@ var Aufgabe11;
         let url = "https://gispraktikum2020.herokuapp.com";
         url = url + "/versenden";
         url = url + "?" + query.toString();
+        await fetch(url);
     }
     async function handleAbfragen() {
         let formData = new FormData(document.forms[0]);

@@ -17,6 +17,8 @@ namespace Aufgabe11 {
         let url: string = "https://gispraktikum2020.herokuapp.com";
         url = url + "/versenden";
         url = url + "?" + query.toString();
+
+        await fetch(url);
     }
 
     async function handleAbfragen(): Promise<void> {
