@@ -77,6 +77,6 @@ export namespace Aufgabe11 {
 
     function storeAntworten(_antwort: Antwort): void {
 
-        antworten.insert(_antwort);
+        antworten.insertOne(_antwort);
     }
 }
