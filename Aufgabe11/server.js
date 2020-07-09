@@ -43,16 +43,16 @@ var Aufgabe11;
                 storeAntworten(q.query);
             }
             else if (q.pathname == "/abfragen") {
-                //tslint:disable-next-line: no-any
                 let ergebnis = await antworten.find().toArray();
-                //let ausgabe: string = "";
                 for (let i = 0; i < ergebnis.length; i++) {
                     let feld = ergebnis[i];
                     for (let key in feld) {
                         _response.write(key + ": " + feld[key] + "<br/>");
                     }
                 }
-                //_response.write(JSON.stringify(await antworten.find().toArray()));
+            }
+            else if (q.pathname == "/leeren") {
+                antworten.remove({});
             }
         }
         _response.end();

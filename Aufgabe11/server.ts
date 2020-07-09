@@ -69,9 +69,8 @@ export namespace Aufgabe11 {
 
             else if (q.pathname == "/abfragen") {
 
-                //tslint:disable-next-line: no-any
                 let ergebnis: Antwort[] = await antworten.find().toArray();
-                //let ausgabe: string = "";
+             
                 for (let i: number = 0; i < ergebnis.length; i++) {
 
                     let feld: Antwort = ergebnis[i];
@@ -81,8 +80,11 @@ export namespace Aufgabe11 {
                         _response.write(key + ": " + feld[key] + "<br/>");
                     }
                 }
+            }
 
-                //_response.write(JSON.stringify(await antworten.find().toArray()));
+            else if (q.pathname == "/leeren") {
+
+                antworten.remove({});
             }
         }
         _response.end();
