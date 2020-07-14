@@ -1,0 +1,234 @@
+@font-face {
+    font-family: ueberschrift;
+    src: url("Bilder/Yummy\ Ice\ Cream.ttf");
+}
+
+@font-face {
+    font-family: meineSchrift;
+    src: url("Bilder/Louis\ George\ Cafe.ttf");
+}
+
+body {
+    background-image: url("Bilder/hintergrund.png");
+    background-size: 100%;
+    margin: 0;
+    font-family: meineSchrift;
+}
+
+h1 {
+    color: rgb(168, 31, 31);
+    font-weight: bolder;
+}
+
+p {
+    font-size: larger;
+}
+
+header img {
+    width: 100%;
+    margin-top: -10px;
+    position: relative;
+    z-index: 10;
+}
+
+#ueberschrift {
+    font-family: ueberschrift;
+    font-size: 60px;
+    text-shadow: 3px 3px white;
+    text-align: center;
+    margin-top: -300px;
+    position: relative;
+    z-index: 20;
+}
+
+#willkommen {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding-top: 7px;
+    width: 60%;
+}
+
+#willkommen p:last-child {
+    font-weight: bolder;
+    font-size: x-large;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 55%;
+    margin-left: 2%;
+    margin-top: 3%;
+    background-color: rgb(168, 31, 31);
+    color: white;
+    font-size: large;
+    padding: 2%;
+    border-radius: 20px;
+}
+
+li:hover {
+    cursor: pointer;
+    font-style: italic;
+}
+
+#deinsHead {
+    margin-left: 65%;
+    width: 30%;
+    margin-top: -7.2%;
+    text-align: center;
+    color: white;
+    background-color: rgb(168, 31, 31);
+    font-size: large;
+    padding: 2%;
+    border-radius: 20px;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+}
+
+#wagen {
+    position: fixed;
+    width: 5%;
+    right: 3%;
+    z-index: 20;
+    margin-top: 5px;
+    background-color: white;
+    border-radius: 10px;
+    border-color: rgb(168, 31, 31);
+    border-style: solid;
+    padding: 5px;
+}
+
+#deins {
+    width: 30%;
+    height: 400px;
+    /*margin-left: 65%;*/
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 14%;
+    float: right;
+    overflow: scroll;
+}
+
+.option {
+    border-radius: 25px;
+    border-style: solid;
+    border-color: rgb(168, 31, 31);
+    text-align: center;
+    width: 25%;
+    padding-bottom: 3%;
+    margin-bottom: 3%;
+    margin-top: 3%;
+    margin-right: 2px;
+    background-color: rgb(252, 246, 246);
+}
+
+.option img {
+    width: 90%;
+}
+
+#auswahl {
+    width: 55%;
+    margin-left: 2%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    /*margin-top: -250px;*/
+    position: relative;
+    z-index: 30;
+}
+
+#eis {
+    margin-top: inherit;
+}
+
+#eis {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+#toppings {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+#behaelter {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+@media screen and (min-width: 1900px) {
+
+    #ueberschrift {
+        margin-top: -370px;
+    }
+
+    #deinsHead {
+        margin-top: -6%;
+    }
+
+    #willkommen {
+        margin-top: 150px;
+    }
+} 
+
+@media screen and (max-width: 1024px) {
+
+    #ueberschrift {
+        margin-top: -270px;
+    }
+
+    .option {
+        width: 32%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    #ueberschrift {
+        font-size: 20px;
+        margin-top: -90px;
+    }
+
+    #willkommen {
+        font-size: smaller;
+        width: 100%;
+        margin-top: -20px;
+    }
+
+    #willkommen p:last-child {
+        font-size: small;
+    }
+
+    ul {
+        font-size: smaller;
+    }
+
+    #deinsHead {
+        font-size: smaller;
+        margin-top: -42px;
+    }
+
+    .option {
+        width: 100%;
+        padding-bottom: 20px;
+    }
+
+    #deins {
+        top: 6%;
+    }
+
+    #wagen {
+        margin-top: 0;
+        right: 5px;
+    }
+}
