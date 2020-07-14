@@ -1,0 +1,177 @@
+[
+    {
+        "_bild": "Bilder/brombeere.PNG",
+        "_bildAlt": "Brombeere",
+        "_name": "Brombeere",
+        "_preis": 1.5,
+        "_kategorie": "Eis"
+    },
+    {
+        "_bild": "Bilder/cookies.PNG",
+        "_bildAlt": "Cookies",
+        "_name": "Cookies",
+        "_preis": 1.8,
+        "_kategorie": "Eis"
+    },
+    {
+        "_bild": "Bilder/erdbeer.PNG",
+        "_bildAlt": "Erdbeere",
+        "_name": "Erdbeere",
+        "_preis": 1.5,
+        "_kategorie": "Eis"
+    },
+    {
+        "_bild": "Bilder/himbeere.PNG",
+        "_bildAlt": "Himbeere",
+        "_name": "Himbeere",
+        "_preis": 1.5,
+        "_kategorie": "Eis"
+    },
+    {
+        "_bild": "Bilder/joghurt.PNG",
+        "_bildAlt": "Joghurt",
+        "_name": "Joghurt",
+        "_preis": 1.5,
+        "_kategorie": "Eis"
+    },
+    {
+        "_bild": "Bilder/karamell.PNG",
+        "_bildAlt": "Karamell",
+        "_name": "Karamell",
+        "_preis": 1.6,
+        "_kategorie": "Eis"
+    },
+    {
+        "_bild": "Bilder/kirsche.PNG",
+        "_bildAlt": "Kirsche",
+        "_name": "Kirsche",
+        "_preis": 1.5,
+        "_kategorie": "Eis"
+    },
+    {
+        "_bild": "Bilder/kiwi.PNG",
+        "_bildAlt": "Kiwi",
+        "_name": "Kiwi",
+        "_preis": 1.5,
+        "_kategorie": "Eis"
+    },
+    {
+        "_bild": "Bilder/mango.PNG",
+        "_bildAlt": "Mango",
+        "_name": "Mango",
+        "_preis": 1.5,
+        "_kategorie": "Eis"
+    },
+    {
+        "_bild": "Bilder/melone.PNG",
+        "_bildAlt": "Melone",
+        "_name": "Melone",
+        "_preis": 1.5,
+        "_kategorie": "Eis"
+    },
+    {
+        "_bild": "Bilder/pistazie.PNG",
+        "_bildAlt": "Pistazie",
+        "_name": "Pistazie",
+        "_preis": 1.7,
+        "_kategorie": "Eis"
+    },
+    {
+        "_bild": "Bilder/becher.png",
+        "_bildAlt": "Becher",
+        "_name": "Becher",
+        "_preis": 0,
+        "_kategorie": "Behaelter"
+    },
+    {
+        "_bild": "Bilder/erdbeersosse.png",
+        "_bildAlt": "Erdbeersoße",
+        "_name": "Erdbeersoße",
+        "_preis": 1,
+        "_kategorie": "Topping"
+    },
+    {
+        "_bild": "Bilder/gummib.png",
+        "_bildAlt": "Gummibären",
+        "_name": "Gummibären",
+        "_preis": 1.5,
+        "_kategorie": "Topping"
+    },
+    {
+        "_bild": "Bilder/mundm.png",
+        "_bildAlt": "M&M's",
+        "_name": "M&M's",
+        "_preis": 2,
+        "_kategorie": "Topping"
+    },
+    {
+        "_bild": "Bilder/nuesse.png",
+        "_bildAlt": "Nüsse",
+        "_name": "Nüsse",
+        "_preis": 1.5,
+        "_kategorie": "Topping"
+    },
+    {
+        "_bild": "Bilder/oreo.png",
+        "_bildAlt": "Oreo",
+        "_name": "Oreo",
+        "_preis": 2,
+        "_kategorie": "Topping"
+    },
+    {
+        "_bild": "Bilder/sahne.png",
+        "_bildAlt": "Sahne",
+        "_name": "Sahne",
+        "_preis": 1,
+        "_kategorie": "Topping"
+    },
+    {
+        "_bild": "Bilder/schoko.PNG",
+        "_bildAlt": "Schoko",
+        "_name": "Schoko",
+        "_preis": 1.5,
+        "_kategorie": "Eis"
+    },
+    {
+        "_bild": "Bilder/schokososse.png",
+        "_bildAlt": "Schokosoße",
+        "_name": "Schokosoße",
+        "_preis": 1,
+        "_kategorie": "Topping"
+    },
+    {
+        "_bild": "Bilder/schokostreusel.png",
+        "_bildAlt": "Schokostreusel",
+        "_name": "Schokostreusel",
+        "_preis": 1.5,
+        "_kategorie": "Topping"
+    },
+    {
+        "_bild": "Bilder/streusel.png",
+        "_bildAlt": "Streusel",
+        "_name": "Streusel",
+        "_preis": 1.5,
+        "_kategorie": "Topping"
+    },
+    {
+        "_bild": "Bilder/vanille2.PNG",
+        "_bildAlt": "Vanille",
+        "_name": "Vanille",
+        "_preis": 1.5,
+        "_kategorie": "Eis"
+    },
+    {
+        "_bild": "Bilder/waffel.png",
+        "_bildAlt": "Waffel",
+        "_name": "Waffel",
+        "_preis": 0,
+        "_kategorie": "Behaelter"
+    },
+    {
+        "_bild": "Bilder/waldbeeren.PNG",
+        "_bildAlt": "Waldbeeren",
+        "_name": "Waldbeeren",
+        "_preis": 1.8,
+        "_kategorie": "Eis"
+    }
+]

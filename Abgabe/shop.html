@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eis 4 You</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 
 <header>
@@ -25,110 +26,30 @@
             und suche dir aus was dir gefällt!
         </p>
         <p>Max: 5 Kugeln! <br> Max: 3 Toppings!</p>
-        <form>
-            <button type="button" id="test">test</button>
-        </form>
     </div>
 
-    <div id="test">
+    <div>
     <ul>
-        <li>Alles</li>
-        <li>Eis</li>
-        <li>Toppings</li>
-        <li>Behälter</li>
+        <li id="allesF">Alles</li>
+        <li id="eisF">Eis</li>
+        <li id="toppF">Toppings</li>
+        <li id="behF">Behälter</li>
     </ul>
     </div>
     
     <div id="deinsHead">Dein Eis</div>
-    <div id="deins">
-        <div class="option">
-            <img src="Bilder/kiwi.PNG" alt="kiwi">
-            <h2>Kiwi</h2>
-            <p>2,20</p>
-            <button type="button">hinzufügen</button>
-        </div>
-        <div class="option">
-            <img src="Bilder/kiwi.PNG" alt="kiwi">
-            <h2>Kiwi</h2>
-            <p>2,20</p>
-            <button type="button">hinzufügen</button>
-        </div>
-        <div class="option">
-            <img src="Bilder/kiwi.PNG" alt="kiwi">
-            <h2>Kiwi</h2>
-            <p>2,20</p>
-            <button type="button">hinzufügen</button>
-        </div>
-        <div class="option">
-            <img src="Bilder/kiwi.PNG" alt="kiwi">
-            <h2>Kiwi</h2>
-            <p>2,20</p>
-            <button type="button">hinzufügen</button>
-        </div>
-        <div class="option">
-            <img src="Bilder/kiwi.PNG" alt="kiwi">
-            <h2>Kiwi</h2>
-            <p>2,20</p>
-            <button type="button">hinzufügen</button>
-        </div>
-        <div class="option">
-            <img src="Bilder/kiwi.PNG" alt="kiwi">
-            <h2>Kiwi</h2>
-            <p>2,20</p>
-            <button type="button">hinzufügen</button>
-        </div>
-        <div class="option">
-            <img src="Bilder/kiwi.PNG" alt="kiwi">
-            <h2>Kiwi</h2>
-            <p>2,20</p>
-            <button type="button">hinzufügen</button>
-        </div>
-        
-    </div>
+    
+    <div id="deins"></div>
 
     <div id="auswahl">
-        <div id="eis">
-            <div class="option">
-                <img src="Bilder/kiwi.PNG" alt="kiwi">
-                <h2>Kiwi</h2>
-                <p>2,20</p>
-                <button type="button">hinzufügen</button>
-            </div>
-            <div class="option">
-                <img src="Bilder/kiwi.PNG" alt="kiwi">
-                <h2>Kiwi</h2>
-                <p>2,20</p>
-                <button type="button">hinzufügen</button>
-            </div>
-            <div class="option">
-                <img src="Bilder/kiwi.PNG" alt="kiwi">
-                <h2>Kiwi</h2>
-                <p>2,20</p>
-                <button type="button">hinzufügen</button>
-            </div>
-            <div class="option">
-                <img src="Bilder/kiwi.PNG" alt="kiwi">
-                <h2>Kiwi</h2>
-                <p>2,20</p>
-                <button type="button">hinzufügen</button>
-            </div>
-        </div>
-        <div id="toppings">
-            <div class="option">
-                <img src="Bilder/kiwi.PNG" alt="kiwi">
-                <h2>Kiwi</h2>
-                <p>2,20</p>
-                <button type="button">hinzufügen</button>
-            </div>
-        </div>
-        <div id="behaelter">
-            <div class="option">
-                <img src="Bilder/kiwi.PNG" alt="kiwi">
-                <h2>Kiwi</h2>
-                <p>2,20</p>
-                <button type="button">hinzufügen</button>
-            </div>
-        </div>
+        <h1 id="headEis">Eis</h1>
+        <div id="eis"></div>
+
+        <h1 id="headTopp">Toppings</h1>
+        <div id="toppings"></div>
+
+        <h1 id="headBeh">Behälter</h1>
+        <div id="behaelter"></div>
     </div>
 </body>
 </html>
