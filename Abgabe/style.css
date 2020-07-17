@@ -104,7 +104,7 @@ li:hover {
 
 #deins {
     width: 30%;
-    height: 400px;
+    height: 450px;
     /*margin-left: 65%;*/
     display: flex;
     flex-wrap: wrap;
@@ -114,6 +114,11 @@ li:hover {
     top: 14%;
     float: right;
     overflow: scroll;
+}
+
+#deins .option {
+    width: 45%;
+    height: 70%;
 }
 
 .option {
@@ -166,12 +171,44 @@ li:hover {
     justify-content: space-evenly;
 }
 
-.button {
+.select {
     border-radius: 10px;
     border-style: solid;
     border-color: rgb(168, 31, 31);
     color: rgb(168, 31, 31);
     padding: 5px;
+    cursor: pointer;
+    outline: none;
+}
+
+.select:hover {
+    background-color: rgb(58, 168, 31);
+    border-color: rgb(58, 168, 31);
+    color: white;
+}
+
+.select:active {
+    background-color: rgb(29, 82, 16);
+}
+
+.entfernen {
+    border-radius: 10px;
+    border-style: solid;
+    border-color: rgb(168, 31, 31);
+    color: rgb(180, 92, 92);
+    padding: 5px;
+    cursor: pointer;
+    outline: none;
+}
+
+.entfernen:hover {
+    background-color: rgb(168, 31, 31);
+    border-color: rgb(168, 31, 31);
+    color: white;
+}
+
+.entfernen:active {
+    background-color: rgb(90, 16, 16);
 }
 
 @media screen and (min-width: 1900px) {

@@ -1,6 +1,10 @@
 "use strict";
 var Abgabe;
 (function (Abgabe) {
+    let eisGew = [];
+    let toppGew = [];
+    let behGew = [];
+    let gewaehlt = [];
     let eis = document.getElementById("eis");
     let topping = document.getElementById("toppings");
     let behaelter = document.getElementById("behaelter");
@@ -30,13 +34,41 @@ var Abgabe;
             divOption.appendChild(name);
             let preis = document.createElement("p");
             preis.setAttribute("class", "preis");
-            preis.innerHTML = inhalt[i]._preis + "€  ";
+            preis.innerHTML = inhalt[i]._preis.toLocaleString("de-DE", { "currency": "EUR", "style": "currency" });
             divOption.appendChild(preis);
-            let button = document.createElement("button");
-            button.setAttribute("type", "button");
-            button.setAttribute("class", "button");
-            button.innerHTML = "Auswählen";
-            divOption.appendChild(button);
+            let select = document.createElement("button");
+            select.setAttribute("type", "button");
+            select.setAttribute("class", "select");
+            select.innerHTML = "Auswählen";
+            divOption.appendChild(select);
+            select.addEventListener("click", handleSelect);
+            //Optionen auswählen
+            function handleSelect() {
+                if (inhalt[i]._kategorie == "Eis" && eisGew.length < 5) {
+                    eisGew.push(inhalt[i]);
+                    gewaehlt.push(inhalt[i]);
+                    handleGewaehlt();
+                }
+                if (inhalt[i]._kategorie == "Eis" && eisGew.length == 5) {
+                    window.alert("Maximum der Eiskugeln erreicht!");
+                }
+                if (inhalt[i]._kategorie == "Topping" && toppGew.length < 3) {
+                    toppGew.push(inhalt[i]);
+                    gewaehlt.push(inhalt[i]);
+                    handleGewaehlt();
+                }
+                if (inhalt[i]._kategorie == "Topping" && toppGew.length == 3) {
+                    window.alert("Maximum der Toppings erreicht!");
+                }
+                if (inhalt[i]._kategorie == "Behaelter" && behGew.length != 0) {
+                    window.alert("Behälter bereits Ausgewählt! Entfernen Sie den gewählten Behälter falls Sie einen anderen möchten!");
+                }
+                if (inhalt[i]._kategorie == "Behaelter" && behGew.length < 1) {
+                    behGew.push(inhalt[i]);
+                    gewaehlt.push(inhalt[i]);
+                    handleGewaehlt();
+                }
+            }
         }
     }
     ladeJson("inhalt.json");
@@ -83,6 +115,48 @@ var Abgabe;
         headEis.hidden = true;
         headTopp.hidden = true;
         headBeh.hidden = false;
+    }
+    //Gewählte Optionen anzeigen
+    function handleGewaehlt() {
+        let gewaehltDiv = document.getElementById("deins");
+        gewaehltDiv.innerHTML = "";
+        for (let i = 0; i < gewaehlt.length; i++) {
+            let divOption = document.createElement("div");
+            divOption.setAttribute("class", "option");
+            let bild = document.createElement("img");
+            bild.setAttribute("class", "bild");
+            bild.setAttribute("src", gewaehlt[i]._bild);
+            bild.setAttribute("alt", gewaehlt[i]._bildAlt);
+            divOption.appendChild(bild);
+            let name = document.createElement("h2");
+            name.innerHTML = gewaehlt[i]._name;
+            divOption.appendChild(name);
+            let preis = document.createElement("p");
+            preis.setAttribute("class", "preis");
+            preis.innerHTML = gewaehlt[i]._preis.toLocaleString("de-DE", { "currency": "EUR", "style": "currency" });
+            divOption.appendChild(preis);
+            let entfernen = document.createElement("button");
+            entfernen.setAttribute("type", "button");
+            entfernen.setAttribute("class", "entfernen");
+            entfernen.innerHTML = "Entfernen";
+            divOption.appendChild(entfernen);
+            entfernen.addEventListener("click", handleEntfernen);
+            gewaehltDiv.appendChild(divOption);
+            function handleEntfernen() {
+                if (gewaehlt[i]._kategorie == "Eis") {
+                    eisGew.splice(0, 1);
+                    console.log(eisGew.length);
+                }
+                if (gewaehlt[i]._kategorie == "Topping") {
+                    toppGew.splice(0, 1);
+                }
+                if (gewaehlt[i]._kategorie == "Behaelter") {
+                    behGew.splice(0, 1);
+                }
+                gewaehlt.splice(i, 1);
+                handleGewaehlt();
+            }
+        }
     }
 })(Abgabe || (Abgabe = {}));
 //# sourceMappingURL=script.js.map
