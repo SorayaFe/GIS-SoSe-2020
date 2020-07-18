@@ -3,28 +3,28 @@
         "_bild": "Bilder/brombeere.PNG",
         "_bildAlt": "Brombeere",
         "_name": "Brombeere",
-        "_preis": 1.5,
+        "_preis": 1.3,
         "_kategorie": "Eis"
     },
     {
         "_bild": "Bilder/cookies.PNG",
         "_bildAlt": "Cookies",
         "_name": "Cookies",
-        "_preis": 1.8,
+        "_preis": 1.7,
         "_kategorie": "Eis"
     },
     {
         "_bild": "Bilder/erdbeer.PNG",
         "_bildAlt": "Erdbeere",
         "_name": "Erdbeere",
-        "_preis": 1.5,
+        "_preis": 1.3,
         "_kategorie": "Eis"
     },
     {
         "_bild": "Bilder/himbeere.PNG",
         "_bildAlt": "Himbeere",
         "_name": "Himbeere",
-        "_preis": 1.5,
+        "_preis": 1.3,
         "_kategorie": "Eis"
     },
     {
@@ -45,14 +45,14 @@
         "_bild": "Bilder/kirsche.PNG",
         "_bildAlt": "Kirsche",
         "_name": "Kirsche",
-        "_preis": 1.5,
+        "_preis": 1.3,
         "_kategorie": "Eis"
     },
     {
         "_bild": "Bilder/kiwi.PNG",
         "_bildAlt": "Kiwi",
         "_name": "Kiwi",
-        "_preis": 1.5,
+        "_preis": 1.3,
         "_kategorie": "Eis"
     },
     {
@@ -157,7 +157,7 @@
         "_bild": "Bilder/vanille2.PNG",
         "_bildAlt": "Vanille",
         "_name": "Vanille",
-        "_preis": 1.5,
+        "_preis": 1.3,
         "_kategorie": "Eis"
     },
     {
@@ -171,7 +171,7 @@
         "_bild": "Bilder/waldbeeren.PNG",
         "_bildAlt": "Waldbeeren",
         "_name": "Waldbeeren",
-        "_preis": 1.8,
+        "_preis": 1.6,
         "_kategorie": "Eis"
     }
 ]

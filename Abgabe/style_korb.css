@@ -1,0 +1,27 @@
+@font-face {
+    font-family: meineSchrift;
+    src: url("Bilder/Louis\ George\ Cafe.ttf");
+}
+
+body {
+    background-image: url("Bilder/hintergrund.png");
+    background-size: 100%;
+    margin: 0;
+    font-family: meineSchrift;
+}
+
+h1 {
+    text-decoration: underline;
+    margin-left: 2%;
+    color: rgb(168, 31, 31);
+}
+
+#formular input {
+    margin-left: 2%;
+    font-size: large;
+    padding: 10px;
+    margin-bottom: 1%;
+    border-style: dotted;
+    border-radius: 10px;
+    border-color: rgb(168, 31, 31);
+}

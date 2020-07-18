@@ -3,29 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eis 4 You</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+    <title>NICEDIELE</title>
+    <link rel="stylesheet" href="style_shop.css">
+    <script src="script_shop.js" defer></script>
 </head>
-
-<header>
-    <img src="Bilder/header.jpg" alt="Eis mit Toppings">
-    <img id="wagen" src="Bilder/korb.png" alt="Warenkorb">
-</header>
 
 <body>
 
+<header>
+    <img src="Bilder/header.jpg" alt="Eis mit Toppings">
+    <a href="korb.html"><img id="wagen" src="Bilder/korb.png" alt="Warenkorb"></a>
+</header>
+
 <div id="ueberschrift">
-    <h1>Eis 4 You</h1>
+    <h1>NICEDIELE</h1>
 </div>
 
-
     <div id="willkommen">
-        <h1>Herzlich Willkommen bei Eis 4 You!</h1>
-        <p>Mit Eis 4 You kannst du selbst dein eigenes Eis zusammenstellen! Ob klassisches 
+        <h1>Herzlich Willkommen bei NICEDIELE!</h1>
+        <p>Mit NICEDIELE kannst du selbst dein eigenes Eis zusammenstellen! Ob klassisches 
             Schokoladeneis mit Schokostreuseln, oder ausgefallene neue Eiskreationen, hier findest
             du sicher etwas, das deinen Geschmack trifft! Lasse deiner Kreativität freien Lauf
-            und suche dir aus was dir gefällt!
+            und suche dir aus, was dir gefällt!
         </p>
         <p>Max: 5 Kugeln! <br> Max: 3 Toppings!</p>
     </div>
@@ -39,10 +38,14 @@
     </ul>
     </div>
     
-    <div id="deinsHead">Dein Eis</div>
+    <div id="deinsHead">
+        Dein Eis 
+        <div id="preis"></div>
+    </div>
     
+    <button type="button" id="inKorb">In den Warenkorb legen</button>
     <div id="deins"></div>
-
+    
     <div id="auswahl">
         <h1 id="headEis">Eis</h1>
         <div id="eis"></div>

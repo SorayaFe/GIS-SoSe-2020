@@ -1,8 +1,8 @@
- namespace Abgabe {
+namespace Abgabe {
 
     export interface Option {
         _bild: string;
-        _bildAlt: string; 
+        _bildAlt: string;
         _name: string;
         _preis: number;
         _kategorie: string;
@@ -13,6 +13,9 @@
     let behGew: Option[] = [];
 
     let gewaehlt: Option[] = [];
+
+    let preisDiv: HTMLElement = <HTMLElement>document.getElementById("preis");
+    let gesPreis: number[] = [];
 
     let eis: HTMLElement = <HTMLElement>document.getElementById("eis");
     let topping: HTMLElement = <HTMLElement>document.getElementById("toppings");
@@ -68,38 +71,39 @@
             //Optionen auswählen
             function handleSelect(): void {
 
-                if (inhalt[i]._kategorie == "Eis" && eisGew.length < 5) {
-                    eisGew.push(inhalt[i]);
-                    gewaehlt.push(inhalt[i]);
-                    handleGewaehlt();
-                    
-                }
-
                 if (inhalt[i]._kategorie == "Eis" && eisGew.length == 5) {
                     window.alert("Maximum der Eiskugeln erreicht!");
                 }
 
-                if (inhalt[i]._kategorie == "Topping" && toppGew.length < 3) {
-                    toppGew.push(inhalt[i]);
+                if (inhalt[i]._kategorie == "Eis" && eisGew.length < 5) {
+                    eisGew.push(inhalt[i]);
                     gewaehlt.push(inhalt[i]);
+                    gesPreis.push(inhalt[i]._preis);
                     handleGewaehlt();
+
                 }
 
                 if (inhalt[i]._kategorie == "Topping" && toppGew.length == 3) {
                     window.alert("Maximum der Toppings erreicht!");
                 }
 
-                if (inhalt[i]._kategorie == "Behaelter" && behGew.length != 0) {
-                    window.alert("Behälter bereits Ausgewählt! Entfernen Sie den gewählten Behälter falls Sie einen anderen möchten!");
-                }
-                
-                if (inhalt[i]._kategorie == "Behaelter" && behGew.length < 1) {
-                    behGew.push(inhalt[i]);
+                if (inhalt[i]._kategorie == "Topping" && toppGew.length < 3) {
+                    toppGew.push(inhalt[i]);
                     gewaehlt.push(inhalt[i]);
+                    gesPreis.push(inhalt[i]._preis);
                     handleGewaehlt();
                 }
 
-                
+                if (inhalt[i]._kategorie == "Behaelter" && behGew.length != 0) {
+                    window.alert("Behälter bereits Ausgewählt! Entfernen Sie den gewählten Behälter falls Sie einen anderen möchten!");
+                }
+
+                if (inhalt[i]._kategorie == "Behaelter" && behGew.length < 1) {
+                    behGew.push(inhalt[i]);
+                    gewaehlt.push(inhalt[i]);
+                    gesPreis.push(inhalt[i]._preis);
+                    handleGewaehlt();
+                }
             }
 
         }
@@ -195,8 +199,16 @@
             divOption.appendChild(entfernen);
             entfernen.addEventListener("click", handleEntfernen);
 
-            gewaehltDiv.appendChild(divOption);
+            let summe: number = 0;
+            for (let i: number = 0; i < gesPreis.length; i++) {
+                summe = summe + gesPreis[i];
+            }
 
+            preisDiv.innerHTML = "Preis: " + summe.toLocaleString("de-DE", { "currency": "EUR", "style": "currency" });
+
+            gewaehltDiv.appendChild(divOption);
+            
+            //Optionen entfernen
             function handleEntfernen(): void {
 
                 if (gewaehlt[i]._kategorie == "Eis") {
@@ -211,8 +223,25 @@
                 }
 
                 gewaehlt.splice(i, 1);
+                gesPreis.splice(i, 1);
                 handleGewaehlt();
             }
+        }
     }
-}
+
+    //In Warenkorb legen
+    let inKorb: HTMLElement = <HTMLElement>document.getElementById("inKorb");
+    inKorb.addEventListener("click", handleKorb);
+
+    function handleKorb(): void {
+
+        if (behGew.length == 0) {
+            window.alert("Bitte wählen Sie zuerst einen Behälter aus!");
+        }
+
+        else {
+            localStorage.setItem("Bestellung", JSON.stringify(gewaehlt));
+        }
+    }
+
 }

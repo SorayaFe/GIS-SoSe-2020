@@ -152,6 +152,7 @@ var Abgabe;
             }
             preisDiv.innerHTML = "Preis: " + summe.toLocaleString("de-DE", { "currency": "EUR", "style": "currency" });
             gewaehltDiv.appendChild(divOption);
+            //Optionen entfernen
             function handleEntfernen() {
                 if (gewaehlt[i]._kategorie == "Eis") {
                     eisGew.splice(0, 1);
@@ -164,6 +165,7 @@ var Abgabe;
                     behGew.splice(0, 1);
                 }
                 gewaehlt.splice(i, 1);
+                gesPreis.splice(i, 1);
                 handleGewaehlt();
             }
         }
@@ -180,4 +182,4 @@ var Abgabe;
         }
     }
 })(Abgabe || (Abgabe = {}));
-//# sourceMappingURL=script.js.map
+//# sourceMappingURL=script_shop.js.map
