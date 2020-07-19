@@ -198,12 +198,13 @@ namespace Abgabe {
             entfernen.innerHTML = "Entfernen";
             divOption.appendChild(entfernen);
             entfernen.addEventListener("click", handleEntfernen);
-
+            
             let summe: number = 0;
             for (let i: number = 0; i < gesPreis.length; i++) {
                 summe = summe + gesPreis[i];
             }
 
+            localStorage.setItem("Summe", summe.toLocaleString("de-DE", { "currency": "EUR", "style": "currency" }));
             preisDiv.innerHTML = "Preis: " + summe.toLocaleString("de-DE", { "currency": "EUR", "style": "currency" });
 
             gewaehltDiv.appendChild(divOption);
@@ -231,16 +232,23 @@ namespace Abgabe {
 
     //In Warenkorb legen
     let inKorb: HTMLElement = <HTMLElement>document.getElementById("inKorb");
-    inKorb.addEventListener("click", handleKorb);
+    inKorb.addEventListener("click", handleInKorb);
 
-    function handleKorb(): void {
+    function handleInKorb(): void {
 
         if (behGew.length == 0) {
             window.alert("Bitte wählen Sie zuerst einen Behälter aus!");
         }
 
+        if (eisGew.length == 0 && toppGew.length == 0) {
+            window.alert("Bitte wählen Sie mindestens einen Artikel!");
+        }
+
         else {
             localStorage.setItem("Bestellung", JSON.stringify(gewaehlt));
+            let wagen: HTMLElement = <HTMLElement>document.getElementById("wagen");
+            wagen.style.borderColor = "green";
+            wagen.style.borderWidth = "5px";
         }
     }
 

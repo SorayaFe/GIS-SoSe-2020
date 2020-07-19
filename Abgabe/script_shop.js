@@ -150,6 +150,7 @@ var Abgabe;
             for (let i = 0; i < gesPreis.length; i++) {
                 summe = summe + gesPreis[i];
             }
+            localStorage.setItem("Summe", summe.toLocaleString("de-DE", { "currency": "EUR", "style": "currency" }));
             preisDiv.innerHTML = "Preis: " + summe.toLocaleString("de-DE", { "currency": "EUR", "style": "currency" });
             gewaehltDiv.appendChild(divOption);
             //Optionen entfernen
@@ -172,13 +173,19 @@ var Abgabe;
     }
     //In Warenkorb legen
     let inKorb = document.getElementById("inKorb");
-    inKorb.addEventListener("click", handleKorb);
-    function handleKorb() {
+    inKorb.addEventListener("click", handleInKorb);
+    function handleInKorb() {
         if (behGew.length == 0) {
             window.alert("Bitte wählen Sie zuerst einen Behälter aus!");
         }
+        if (eisGew.length == 0 && toppGew.length == 0) {
+            window.alert("Bitte wählen Sie mindestens einen Artikel!");
+        }
         else {
             localStorage.setItem("Bestellung", JSON.stringify(gewaehlt));
+            let wagen = document.getElementById("wagen");
+            wagen.style.borderColor = "green";
+            wagen.style.borderWidth = "5px";
         }
     }
 })(Abgabe || (Abgabe = {}));
