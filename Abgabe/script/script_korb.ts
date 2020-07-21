@@ -81,9 +81,11 @@
         url = url + "/abschicken";
         url = url + "?" + query.toString();
 
-        if (await fetch(url)) {
+        await fetch(url);
 
-        let bestell: HTMLElement = <HTMLElement>document.getElementById("bestell");
+        localStorage.clear();
+
+        /*let bestell: HTMLElement = <HTMLElement>document.getElementById("bestell");
         bestell.innerHTML = "";
         
         formular.innerHTML = "";
@@ -97,7 +99,6 @@
         let nochmal: HTMLElement = <HTMLElement>document.createElement("a");
         nochmal.setAttribute("href", "shop.html");
         nochmal.innerHTML = "Stelle noch ein Eis zusammen!";
-        erfolgreich.appendChild(nochmal);
-        }
+        erfolgreich.appendChild(nochmal);*/
     }
 }
