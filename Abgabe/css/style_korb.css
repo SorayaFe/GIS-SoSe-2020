@@ -66,4 +66,10 @@ h1 {
     border-style: solid;
     border-radius: 10px;
     padding: 5px;
+    cursor: pointer;
+    outline: none;
+}
+
+#laden:active, #deleteAll:active {
+    background-color: grey;
 }

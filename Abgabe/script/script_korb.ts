@@ -71,6 +71,17 @@
 
     //Funktion fürs Bestellen
     async function handleBestellen(): Promise<void> {
+        
+        let formData: FormData = new FormData(document.forms[0]);
+
+        // tslint:disable-next-line: no-any
+        let query: URLSearchParams = new URLSearchParams(<any>formData);
+
+        let url: string = "https://gispraktikum2020.herokuapp.com";
+        url = url + "/abschicken";
+        url = url + "?" + query.toString();
+
+        await fetch(url);
 
         let bestell: HTMLElement = <HTMLElement>document.getElementById("bestell");
         bestell.innerHTML = "";
@@ -87,16 +98,5 @@
         nochmal.setAttribute("href", "shop.html");
         nochmal.innerHTML = "Stelle noch ein Eis zusammen!";
         erfolgreich.appendChild(nochmal);
-        
-        let formData: FormData = new FormData(document.forms[0]);
-
-        // tslint:disable-next-line: no-any
-        let query: URLSearchParams = new URLSearchParams(<any>formData);
-
-        let url: string = "https://gispraktikum2020.herokuapp.com";
-        url = url + "/abschicken";
-        url = url + "?" + query.toString();
-
-        await fetch(url);
     }
 }

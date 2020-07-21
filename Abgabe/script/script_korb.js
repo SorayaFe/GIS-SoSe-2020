@@ -54,6 +54,13 @@ var Abgabe;
     bestellen.addEventListener("click", handleBestellen);
     //Funktion fürs Bestellen
     async function handleBestellen() {
+        let formData = new FormData(document.forms[0]);
+        // tslint:disable-next-line: no-any
+        let query = new URLSearchParams(formData);
+        let url = "https://gispraktikum2020.herokuapp.com";
+        url = url + "/abschicken";
+        url = url + "?" + query.toString();
+        await fetch(url);
         let bestell = document.getElementById("bestell");
         bestell.innerHTML = "";
         formular.innerHTML = "";
@@ -67,13 +74,6 @@ var Abgabe;
         nochmal.setAttribute("href", "shop.html");
         nochmal.innerHTML = "Stelle noch ein Eis zusammen!";
         erfolgreich.appendChild(nochmal);
-        let formData = new FormData(document.forms[0]);
-        // tslint:disable-next-line: no-any
-        let query = new URLSearchParams(formData);
-        let url = "https://gispraktikum2020.herokuapp.com";
-        url = url + "/abschicken";
-        url = url + "?" + query.toString();
-        await fetch(url);
     }
 })(Abgabe || (Abgabe = {}));
 //# sourceMappingURL=script_korb.js.map
