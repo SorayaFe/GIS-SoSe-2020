@@ -84,11 +84,6 @@ export namespace Abgabe {
 
                         _response.write(key + ": " + instanz[key] + "<br/>");
                     }
-                    let bearbeiten: HTMLElement = <HTMLElement>document.createElement("button");
-                    bearbeiten.setAttribute("type", "button");
-                    bearbeiten.innerHTML = "Bearbeiten";
-                    _response.write(bearbeiten);
-
                 }
                 _response.end();
             }

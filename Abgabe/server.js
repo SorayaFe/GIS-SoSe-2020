@@ -52,10 +52,6 @@ var Abgabe;
                     for (let key in instanz) {
                         _response.write(key + ": " + instanz[key] + "<br/>");
                     }
-                    let bearbeiten = document.createElement("button");
-                    bearbeiten.setAttribute("type", "button");
-                    bearbeiten.innerHTML = "Bearbeiten";
-                    _response.write(bearbeiten);
                 }
                 _response.end();
             }
