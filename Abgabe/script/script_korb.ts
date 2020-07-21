@@ -81,7 +81,7 @@
         url = url + "/abschicken";
         url = url + "?" + query.toString();
 
-        await fetch(url);
+        if (await fetch(url)) {
 
         let bestell: HTMLElement = <HTMLElement>document.getElementById("bestell");
         bestell.innerHTML = "";
@@ -98,5 +98,6 @@
         nochmal.setAttribute("href", "shop.html");
         nochmal.innerHTML = "Stelle noch ein Eis zusammen!";
         erfolgreich.appendChild(nochmal);
+        }
     }
 }

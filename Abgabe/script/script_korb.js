@@ -60,20 +60,21 @@ var Abgabe;
         let url = "https://gispraktikum2020.herokuapp.com";
         url = url + "/abschicken";
         url = url + "?" + query.toString();
-        await fetch(url);
-        let bestell = document.getElementById("bestell");
-        bestell.innerHTML = "";
-        formular.innerHTML = "";
-        gesPreis.innerHTML = "";
-        let erfolgreich = document.createElement("h1");
-        erfolgreich.setAttribute("id", "erfolgreich");
-        erfolgreich.innerHTML = "Bestellung erfolgreich!";
-        erfolgreich.appendChild(document.createElement("br"));
-        document.querySelector("body")?.appendChild(erfolgreich);
-        let nochmal = document.createElement("a");
-        nochmal.setAttribute("href", "shop.html");
-        nochmal.innerHTML = "Stelle noch ein Eis zusammen!";
-        erfolgreich.appendChild(nochmal);
+        if (await fetch(url)) {
+            let bestell = document.getElementById("bestell");
+            bestell.innerHTML = "";
+            formular.innerHTML = "";
+            gesPreis.innerHTML = "";
+            let erfolgreich = document.createElement("h1");
+            erfolgreich.setAttribute("id", "erfolgreich");
+            erfolgreich.innerHTML = "Bestellung erfolgreich!";
+            erfolgreich.appendChild(document.createElement("br"));
+            document.querySelector("body")?.appendChild(erfolgreich);
+            let nochmal = document.createElement("a");
+            nochmal.setAttribute("href", "shop.html");
+            nochmal.innerHTML = "Stelle noch ein Eis zusammen!";
+            erfolgreich.appendChild(nochmal);
+        }
     }
 })(Abgabe || (Abgabe = {}));
 //# sourceMappingURL=script_korb.js.map
