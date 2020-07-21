@@ -4,6 +4,8 @@ exports.Abgabe = void 0;
 const Http = require("http");
 const url = require("url");
 const Mongo = require("mongodb");
+//Servercode größtenteils übernommen aus den Praktikumsaufgaben
+//also das, was Herr Dell'Oro in den Videos gezeigt hat
 var Abgabe;
 (function (Abgabe) {
     let bestellungen;
@@ -28,7 +30,7 @@ var Abgabe;
         let options = { useNewUrlParser: true, useUnifiedTopology: true };
         let mongoClient = new Mongo.MongoClient(_url, options);
         await mongoClient.connect();
-        bestellungen = mongoClient.db("Aufgabe11").collection("bestellungen");
+        bestellungen = mongoClient.db("Abgabe").collection("Bestellungen");
         console.log("Database connection", bestellungen != undefined);
     }
     async function handleRequest(_request, _response) {
@@ -40,30 +42,26 @@ var Abgabe;
             if (q.pathname == "/abschicken") {
                 storebestellungen(q.query);
             }
-            /*else if (q.pathname == "/abfragen") {
-
-                let ergebnis: Bestellung[] = await bestellungen.find().toArray();
-             
-                for (let i: number = 0; i < ergebnis.length; i++) {
-
-                    let feld: Bestellung = ergebnis[i];
-
-                    for (let key in feld) {
-
-                        _response.write(key + ": " + feld[key] + "<br/>");
-                    }
-                }
-            }
-
-            else if (q.pathname == "/leeren") {
-
+            if (q.pathname == "/loeschen") {
                 bestellungen.remove({});
             }
-        }*/
-            _response.end();
-        }
-        function storebestellungen(_bestellung) {
-            bestellungen.insertOne(_bestellung);
+            if (q.pathname == "/laden") {
+                let ergebnis = await bestellungen.find().toArray();
+                for (let i = 0; i < ergebnis.length; i++) {
+                    let instanz = ergebnis[i];
+                    for (let key in instanz) {
+                        _response.write(key + ": " + instanz[key] + "<br/>");
+                    }
+                    let bearbeiten = document.createElement("button");
+                    bearbeiten.setAttribute("type", "button");
+                    bearbeiten.innerHTML = "Bearbeiten";
+                    _response.write(bearbeiten);
+                }
+                _response.end();
+            }
+            function storebestellungen(_bestellung) {
+                bestellungen.insertOne(_bestellung);
+            }
         }
     }
 })(Abgabe = exports.Abgabe || (exports.Abgabe = {}));

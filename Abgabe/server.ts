@@ -2,6 +2,9 @@ import * as Http from "http";
 import * as url from "url";
 import * as Mongo from "mongodb";
 
+//Servercode größtenteils übernommen aus den Praktikumsaufgaben
+//also das, was Herr Dell'Oro in den Videos gezeigt hat
+
 export namespace Abgabe {
 
     interface Bestellung {
@@ -44,7 +47,7 @@ export namespace Abgabe {
         let mongoClient: Mongo.MongoClient = new Mongo.MongoClient(_url, options);
         await mongoClient.connect();
 
-        bestellungen = mongoClient.db("Aufgabe11").collection("bestellungen");
+        bestellungen = mongoClient.db("Abgabe").collection("Bestellungen");
         console.log("Database connection", bestellungen != undefined);
     }
 
@@ -64,32 +67,36 @@ export namespace Abgabe {
                 storebestellungen(<Bestellung>q.query);
             }
 
-            /*else if (q.pathname == "/abfragen") {
-
-                let ergebnis: Bestellung[] = await bestellungen.find().toArray();
-             
-                for (let i: number = 0; i < ergebnis.length; i++) {
-
-                    let feld: Bestellung = ergebnis[i];
-
-                    for (let key in feld) {
-
-                        _response.write(key + ": " + feld[key] + "<br/>");
-                    }
-                }
-            }
-
-            else if (q.pathname == "/leeren") {
+            if (q.pathname == "/loeschen") {
 
                 bestellungen.remove({});
             }
-        }*/
-            _response.end();
-        }
 
-        function storebestellungen(_bestellung: Bestellung): void {
+            if (q.pathname == "/laden") {
 
-            bestellungen.insertOne(_bestellung);
+                let ergebnis: Bestellung[] = await bestellungen.find().toArray();
+
+                for (let i: number = 0; i < ergebnis.length; i++) {
+
+                    let instanz: Bestellung = ergebnis[i];
+
+                    for (let key in instanz) {
+
+                        _response.write(key + ": " + instanz[key] + "<br/>");
+                    }
+                    let bearbeiten: HTMLElement = <HTMLElement>document.createElement("button");
+                    bearbeiten.setAttribute("type", "button");
+                    bearbeiten.innerHTML = "Bearbeiten";
+                    _response.write(bearbeiten);
+
+                }
+                _response.end();
+            }
+
+            function storebestellungen(_bestellung: Bestellung): void {
+
+                bestellungen.insertOne(_bestellung);
+            }
         }
     }
 }

@@ -52,7 +52,21 @@ var Abgabe;
     bestellen.innerHTML = "Jetzt bestellen!";
     formular.appendChild(bestellen);
     bestellen.addEventListener("click", handleBestellen);
+    //Funktion fürs Bestellen
     async function handleBestellen() {
+        let bestell = document.getElementById("bestell");
+        bestell.innerHTML = "";
+        formular.innerHTML = "";
+        gesPreis.innerHTML = "";
+        let erfolgreich = document.createElement("h1");
+        erfolgreich.setAttribute("id", "erfolgreich");
+        erfolgreich.innerHTML = "Bestellung erfolgreich!";
+        erfolgreich.appendChild(document.createElement("br"));
+        document.querySelector("body")?.appendChild(erfolgreich);
+        let nochmal = document.createElement("a");
+        nochmal.setAttribute("href", "shop.html");
+        nochmal.innerHTML = "Stelle noch ein Eis zusammen!";
+        erfolgreich.appendChild(nochmal);
         let formData = new FormData(document.forms[0]);
         // tslint:disable-next-line: no-any
         let query = new URLSearchParams(formData);

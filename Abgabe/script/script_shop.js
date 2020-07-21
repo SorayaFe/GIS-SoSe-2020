@@ -76,7 +76,7 @@ var Abgabe;
             }
         }
     }
-    ladeJson("inhalt.json");
+    ladeJson("../inhalt.json");
     //Filtern
     let allesF = document.getElementById("allesF");
     let eisF = document.getElementById("eisF");

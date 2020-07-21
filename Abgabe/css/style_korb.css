@@ -1,10 +1,10 @@
 @font-face {
     font-family: meineSchrift;
-    src: url("Bilder/Louis\ George\ Cafe.ttf");
+    src: url("../Bilder/Louis\ George\ Cafe.ttf");
 }
 
 body {
-    background-image: url("Bilder/hintergrund.png");
+    background-image: url("../Bilder/hintergrund.png");
     background-size: 100%;
     font-family: meineSchrift;
 }
@@ -53,4 +53,17 @@ h1 {
 
 #bestellen:active {
     background-color: rgb(12, 90, 12);
+}
+
+#erfolgreich {
+    text-decoration: none;
+    color: rgb(47, 146, 47);
+}
+
+#laden, #deleteAll {
+    margin-top: 2%;
+    margin-right: 1%;
+    border-style: solid;
+    border-radius: 10px;
+    padding: 5px;
 }

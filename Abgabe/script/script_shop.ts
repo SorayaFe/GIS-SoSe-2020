@@ -106,7 +106,7 @@ namespace Abgabe {
         }
     }
 
-    ladeJson("inhalt.json");
+    ladeJson("../inhalt.json");
 
     //Filtern
     let allesF: HTMLElement = <HTMLElement>document.getElementById("allesF");

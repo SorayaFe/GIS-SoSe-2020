@@ -1,15 +1,15 @@
 @font-face {
     font-family: ueberschrift;
-    src: url("Bilder/Yummy\ Ice\ Cream.ttf");
+    src: url("../Bilder/Yummy\ Ice\ Cream.ttf");
 }
 
 @font-face {
     font-family: meineSchrift;
-    src: url("Bilder/Louis\ George\ Cafe.ttf");
+    src: url("../Bilder/Louis\ George\ Cafe.ttf");
 }
 
 body {
-    background-image: url("Bilder/hintergrund.png");
+    background-image: url("../Bilder/hintergrund.png");
     background-size: 100%;
     margin: 0;
     font-family: meineSchrift;
@@ -228,6 +228,7 @@ li:hover {
 
     #deinsHead {
         margin-top: -6%;
+        font-size: x-large;
     }
 
     #willkommen {
@@ -237,6 +238,16 @@ li:hover {
     #deins .option {
         height: 86%;
         width: 35%;
+    }
+
+    ul, .option, .select, .entfernen {
+        font-size: x-large;
+    }
+
+    #inKorb {
+        width: 22%;
+        margin-left: 72%;
+        font-size: x-large;
     }
 } 
 
