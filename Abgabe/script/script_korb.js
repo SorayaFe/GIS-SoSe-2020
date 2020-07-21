@@ -61,7 +61,7 @@ var Abgabe;
         url = url + "/abschicken";
         url = url + "?" + query.toString();
         await fetch(url);
-        localStorage.clear();
+        //localStorage.clear();
         /*let bestell: HTMLElement = <HTMLElement>document.getElementById("bestell");
         bestell.innerHTML = "";
         

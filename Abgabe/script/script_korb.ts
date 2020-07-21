@@ -83,7 +83,7 @@
 
         await fetch(url);
 
-        localStorage.clear();
+        //localStorage.clear();
 
         /*let bestell: HTMLElement = <HTMLElement>document.getElementById("bestell");
         bestell.innerHTML = "";
