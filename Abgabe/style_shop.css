@@ -152,23 +152,11 @@ li:hover {
     z-index: 30;
 }
 
-#eis {
+#eis, #toppings, #behaelter {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     margin-top: inherit;
-}
-
-#toppings {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-}
-
-#behaelter {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
 }
 
 #inKorb {
@@ -196,7 +184,7 @@ li:hover {
     background-color: rgb(58, 168, 31);
 }
 
-.select {
+.select, .entfernen {
     border-radius: 10px;
     border-style: solid;
     border-color: rgb(168, 31, 31);
@@ -217,13 +205,9 @@ li:hover {
 }
 
 .entfernen {
-    border-radius: 10px;
-    border-style: solid;
     border-color: rgb(168, 31, 31);
-    color: rgb(180, 92, 92);
-    padding: 5px;
-    cursor: pointer;
-    outline: none;
+    color: white;
+    background-color: rgb(219, 146, 146);
 }
 
 .entfernen:hover {
@@ -318,7 +302,7 @@ li:hover {
 
     #inKorb {
         width: 30%;
-        margin-left: 66%;
+        margin-left: 67%;
         top: 10%;
         font-size: xx-small;
     }

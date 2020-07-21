@@ -23,6 +23,7 @@ h1 {
     border-style: dotted;
     border-radius: 10px;
     border-color: rgb(168, 31, 31);
+    outline: none;
 }
 
 #gesPreis {

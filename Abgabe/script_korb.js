@@ -10,32 +10,24 @@ var Abgabe;
     let count2 = 0;
     //Bestellung laden
     for (let i = 0; i < bestellung.length; i++) {
+        let input = document.createElement("input");
+        input.setAttribute("type", "text");
+        input.setAttribute("readonly", "true");
         if (bestellung[i]._kategorie == "Eis") {
             count1 = count1 + 1;
-            let input = document.createElement("input");
-            input.setAttribute("type", "text");
             input.setAttribute("name", "Eis" + count1);
             input.setAttribute("value", "Eis " + count1 + ": " + bestellung[i]._name);
-            input.setAttribute("readonly", "true");
-            formular.appendChild(input);
         }
         if (bestellung[i]._kategorie == "Topping") {
             count2 = count2 + 1;
-            let input = document.createElement("input");
-            input.setAttribute("type", "text");
             input.setAttribute("name", "Topping" + count2);
             input.setAttribute("value", "Topping " + count2 + ": " + bestellung[i]._name);
-            input.setAttribute("readonly", "true");
-            formular.appendChild(input);
         }
         if (bestellung[i]._kategorie == "Behaelter") {
-            let input = document.createElement("input");
-            input.setAttribute("type", "text");
             input.setAttribute("name", "Behaelter");
             input.setAttribute("value", "Behälter: " + bestellung[i]._name);
-            input.setAttribute("readonly", "true");
-            formular.appendChild(input);
         }
+        formular.appendChild(input);
     }
     let br = document.createElement("br");
     formular.appendChild(br);

@@ -74,7 +74,6 @@ namespace Abgabe {
                 if (inhalt[i]._kategorie == "Eis" && eisGew.length == 5) {
                     window.alert("Maximum der Eiskugeln erreicht!");
                 }
-
                 if (inhalt[i]._kategorie == "Eis" && eisGew.length < 5) {
                     eisGew.push(inhalt[i]);
                     gewaehlt.push(inhalt[i]);
@@ -86,7 +85,6 @@ namespace Abgabe {
                 if (inhalt[i]._kategorie == "Topping" && toppGew.length == 3) {
                     window.alert("Maximum der Toppings erreicht!");
                 }
-
                 if (inhalt[i]._kategorie == "Topping" && toppGew.length < 3) {
                     toppGew.push(inhalt[i]);
                     gewaehlt.push(inhalt[i]);
@@ -97,7 +95,6 @@ namespace Abgabe {
                 if (inhalt[i]._kategorie == "Behaelter" && behGew.length != 0) {
                     window.alert("Behälter bereits Ausgewählt! Entfernen Sie den gewählten Behälter falls Sie einen anderen möchten!");
                 }
-
                 if (inhalt[i]._kategorie == "Behaelter" && behGew.length < 1) {
                     behGew.push(inhalt[i]);
                     gewaehlt.push(inhalt[i]);
@@ -239,11 +236,9 @@ namespace Abgabe {
         if (behGew.length == 0) {
             window.alert("Bitte wählen Sie zuerst einen Behälter aus!");
         }
-
         if (eisGew.length == 0 && toppGew.length == 0) {
             window.alert("Bitte wählen Sie mindestens einen Artikel!");
         }
-
         else {
             localStorage.setItem("Bestellung", JSON.stringify(gewaehlt));
             let wagen: HTMLElement = <HTMLElement>document.getElementById("wagen");

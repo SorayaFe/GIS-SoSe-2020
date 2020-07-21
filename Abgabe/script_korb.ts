@@ -10,41 +10,35 @@ namespace Abgabe {
 
     let count1: number = 0;
     let count2: number = 0;
-    
+
     //Bestellung laden
     for (let i: number = 0; i < bestellung.length; i++) {
 
+        let input: HTMLInputElement = <HTMLInputElement>document.createElement("input");
+        input.setAttribute("type", "text");
+        input.setAttribute("readonly", "true");
+
         if (bestellung[i]._kategorie == "Eis") {
-            
+
             count1 = count1 + 1;
-            let input: HTMLInputElement = <HTMLInputElement>document.createElement("input");
-            input.setAttribute("type", "text");
             input.setAttribute("name", "Eis" + count1);
             input.setAttribute("value", "Eis " + count1 + ": " + bestellung[i]._name);
-            input.setAttribute("readonly", "true");
-            formular.appendChild(input);
         }
 
         if (bestellung[i]._kategorie == "Topping") {
-            
+
             count2 = count2 + 1;
-            let input: HTMLInputElement = <HTMLInputElement>document.createElement("input");
-            input.setAttribute("type", "text");
             input.setAttribute("name", "Topping" + count2);
             input.setAttribute("value", "Topping " + count2 + ": " + bestellung[i]._name);
-            input.setAttribute("readonly", "true");
-            formular.appendChild(input);
         }
 
         if (bestellung[i]._kategorie == "Behaelter") {
 
-            let input: HTMLInputElement = <HTMLInputElement>document.createElement("input");
-            input.setAttribute("type", "text");
             input.setAttribute("name", "Behaelter");
             input.setAttribute("value", "Behälter: " + bestellung[i]._name);
-            input.setAttribute("readonly", "true");
-            formular.appendChild(input);
         }
+
+        formular.appendChild(input);
     }
 
     let br: HTMLElement = <HTMLElement>document.createElement("br");
@@ -73,6 +67,19 @@ namespace Abgabe {
     bestellen.setAttribute("id", "bestellen");
     bestellen.innerHTML = "Jetzt bestellen!";
     formular.appendChild(bestellen);
-    
+    bestellen.addEventListener("click", handleBestellen);
 
+    async function handleBestellen(): Promise<void> {
+
+        let formData: FormData = new FormData(document.forms[0]);
+
+        // tslint:disable-next-line: no-any
+        let query: URLSearchParams = new URLSearchParams(<any>formData);
+
+        let url: string = "https://gispraktikum2020.herokuapp.com";
+        url = url + "/abschicken";
+        url = url + "?" + query.toString();
+
+        await fetch(url);
+    }
 }
