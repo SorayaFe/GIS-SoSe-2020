@@ -7,6 +7,7 @@ var Abgabe;
     deleteAll.addEventListener("click", handleDelete);
     laden.addEventListener("click", handleLaden);
     async function handleDelete() {
+        serverAntwort.innerHTML = "Alle Bestellungen gelöscht!";
         let formData = new FormData(document.forms[0]);
         // tslint:disable-next-line: no-any
         let query = new URLSearchParams(formData);
@@ -14,7 +15,6 @@ var Abgabe;
         url = url + "/loeschen";
         url = url + "?" + query.toString();
         await fetch(url);
-        serverAntwort.innerHTML = "Alle Bestellungen gelöscht!";
     }
     async function handleLaden() {
         let formData = new FormData(document.forms[0]);

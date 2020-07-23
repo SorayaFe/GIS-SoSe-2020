@@ -73,3 +73,18 @@ h1 {
 #laden:active, #deleteAll:active {
     background-color: grey;
 }
+
+#serverAntwort {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+#serverAntwort div {
+    text-align: center;
+    font-weight: bold;
+    background-color: rgb(197, 151, 197);
+    border-style: dotted;
+    border-color: purple;
+    border-radius: 20px;
+}

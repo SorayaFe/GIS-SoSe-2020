@@ -8,6 +8,8 @@ namespace Abgabe {
     laden.addEventListener("click", handleLaden);
 
     async function handleDelete(): Promise<void> {
+        
+        serverAntwort.innerHTML = "Alle Bestellungen gelöscht!";
 
         let formData: FormData = new FormData(document.forms[0]);
 
@@ -19,7 +21,6 @@ namespace Abgabe {
         url = url + "?" + query.toString();
 
         await fetch(url);
-        serverAntwort.innerHTML = "Alle Bestellungen gelöscht!";
     }
 
     async function handleLaden(): Promise<void> {
