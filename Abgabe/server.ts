@@ -80,10 +80,15 @@ export namespace Abgabe {
 
                     let instanz: Bestellung = ergebnis[i];
 
+                    _response.write("<div>");
+
                     for (let key in instanz) {
 
                         _response.write(key + ": " + instanz[key] + "<br/>");
                     }
+
+                    _response.write("<button>bla</button>");
+                    _response.write("</div>");
                 }
                 _response.end();
             }

@@ -49,9 +49,12 @@ var Abgabe;
                 let ergebnis = await bestellungen.find().toArray();
                 for (let i = 0; i < ergebnis.length; i++) {
                     let instanz = ergebnis[i];
+                    _response.write("<div>");
                     for (let key in instanz) {
                         _response.write(key + ": " + instanz[key] + "<br/>");
                     }
+                    _response.write("<button>bla</button>");
+                    _response.write("</div>");
                 }
                 _response.end();
             }

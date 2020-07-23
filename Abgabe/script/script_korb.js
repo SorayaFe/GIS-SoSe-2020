@@ -54,6 +54,19 @@ var Abgabe;
     bestellen.addEventListener("click", handleBestellen);
     //Funktion fürs Bestellen
     async function handleBestellen() {
+        let bestell = document.getElementById("bestell");
+        bestell.innerHTML = "";
+        formular.hidden = true;
+        gesPreis.innerHTML = "";
+        let erfolgreich = document.createElement("h1");
+        erfolgreich.setAttribute("id", "erfolgreich");
+        erfolgreich.innerHTML = "Bestellung erfolgreich!";
+        erfolgreich.appendChild(document.createElement("br"));
+        document.querySelector("body")?.appendChild(erfolgreich);
+        let nochmal = document.createElement("a");
+        nochmal.setAttribute("href", "shop.html");
+        nochmal.innerHTML = "Stelle noch ein Eis zusammen!";
+        erfolgreich.appendChild(nochmal);
         let formData = new FormData(document.forms[0]);
         // tslint:disable-next-line: no-any
         let query = new URLSearchParams(formData);
@@ -61,22 +74,6 @@ var Abgabe;
         url = url + "/abschicken";
         url = url + "?" + query.toString();
         await fetch(url);
-        //localStorage.clear();
-        /*let bestell: HTMLElement = <HTMLElement>document.getElementById("bestell");
-        bestell.innerHTML = "";
-        
-        formular.innerHTML = "";
-        gesPreis.innerHTML = "";
-        let erfolgreich: HTMLElement = <HTMLElement>document.createElement("h1");
-        erfolgreich.setAttribute("id", "erfolgreich");
-        erfolgreich.innerHTML = "Bestellung erfolgreich!";
-        erfolgreich.appendChild(document.createElement("br"));
-        document.querySelector("body")?.appendChild(erfolgreich);
-        
-        let nochmal: HTMLElement = <HTMLElement>document.createElement("a");
-        nochmal.setAttribute("href", "shop.html");
-        nochmal.innerHTML = "Stelle noch ein Eis zusammen!";
-        erfolgreich.appendChild(nochmal);*/
     }
 })(Abgabe || (Abgabe = {}));
 //# sourceMappingURL=script_korb.js.map
