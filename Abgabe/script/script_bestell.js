@@ -46,6 +46,7 @@ var Abgabe;
         serverAntwort.innerHTML = antwort2;
     }
     async function handleErledigt() {
+        console.log("jljlk");
         let formData = new FormData(document.forms[0]);
         // tslint:disable-next-line: no-any
         let query = new URLSearchParams(formData);

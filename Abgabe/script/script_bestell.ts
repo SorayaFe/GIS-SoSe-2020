@@ -68,6 +68,8 @@
 
     async function handleErledigt(): Promise<void> {
 
+        console.log("jljlk");
+
         let formData: FormData = new FormData(document.forms[0]);
 
         // tslint:disable-next-line: no-any
