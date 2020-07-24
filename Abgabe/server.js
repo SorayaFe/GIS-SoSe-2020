@@ -40,7 +40,7 @@ var Abgabe;
         if (_request.url) {
             let q = url.parse(_request.url, true);
             if (q.pathname == "/abschicken") {
-                storebestellungen(q.query);
+                storeBestellungen(q.query);
             }
             if (q.pathname == "/loeschen") {
                 bestellungen.remove({});
@@ -53,12 +53,12 @@ var Abgabe;
                     for (let key in instanz) {
                         _response.write(key + ": " + instanz[key] + "<br/>");
                     }
-                    _response.write("<button>bla</button>");
+                    _response.write("<button class='erledigt'>Erledigt</button>");
                     _response.write("</div>");
                 }
                 _response.end();
             }
-            function storebestellungen(_bestellung) {
+            function storeBestellungen(_bestellung) {
                 bestellungen.insertOne(_bestellung);
             }
         }

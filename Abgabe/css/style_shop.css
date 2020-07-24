@@ -109,7 +109,7 @@ li:hover {
 
 #deins {
     width: 35%;
-    height: 480px;
+    height: 470px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -122,7 +122,7 @@ li:hover {
 
 #deins .option {
     width: 45%;
-    height: 70%;
+    height: auto;
 }
 
 .option {
@@ -220,6 +220,20 @@ li:hover {
     background-color: rgb(90, 16, 16);
 }
 
+footer div {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+}
+
+footer {
+    background-color: rgb(238, 202, 227);
+    text-align: center;
+    position: relative;
+    z-index: 50;
+    padding: 10px;
+}
+
 @media screen and (min-width: 1900px) {
 
     #ueberschrift {
@@ -236,7 +250,6 @@ li:hover {
     }
 
     #deins .option {
-        height: 86%;
         width: 35%;
     }
 
@@ -247,6 +260,12 @@ li:hover {
     #inKorb {
         width: 22%;
         margin-left: 72%;
+        font-size: x-large;
+    }
+    a {
+        position: absolute;
+        z-index: 50;
+        margin-top: 50px;
         font-size: x-large;
     }
 } 
@@ -304,7 +323,8 @@ li:hover {
 
     #deins .option {
         width: 95%;
-        height: 55%;
+        height: 50%;
+        font-size: small;
     }
 
     #preis {
@@ -316,5 +336,13 @@ li:hover {
         margin-left: 67%;
         top: 10%;
         font-size: xx-small;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    
+    #deins .option {
+        font-size: x-small;
+        height: 40%;
     }
 }

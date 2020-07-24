@@ -2,77 +2,77 @@
     {
         "_bild": "../Bilder/brombeere.PNG",
         "_bildAlt": "Brombeere",
-        "_name": "Brombeere",
+        "_name": "Brombeereis",
         "_preis": 1.3,
         "_kategorie": "Eis"
     },
     {
         "_bild": "../Bilder/cookies.PNG",
         "_bildAlt": "Cookies",
-        "_name": "Cookies",
+        "_name": "Cookieseis",
         "_preis": 1.7,
         "_kategorie": "Eis"
     },
     {
         "_bild": "../Bilder/erdbeer.PNG",
         "_bildAlt": "Erdbeere",
-        "_name": "Erdbeere",
+        "_name": "Erdbeereis",
         "_preis": 1.3,
         "_kategorie": "Eis"
     },
     {
         "_bild": "../Bilder/himbeere.PNG",
         "_bildAlt": "Himbeere",
-        "_name": "Himbeere",
+        "_name": "Himbeereis",
         "_preis": 1.3,
         "_kategorie": "Eis"
     },
     {
         "_bild": "../Bilder/joghurt.PNG",
         "_bildAlt": "Joghurt",
-        "_name": "Joghurt",
+        "_name": "Joghurteis",
         "_preis": 1.5,
         "_kategorie": "Eis"
     },
     {
         "_bild": "../Bilder/karamell.PNG",
         "_bildAlt": "Karamell",
-        "_name": "Karamell",
+        "_name": "Karamelleis",
         "_preis": 1.6,
         "_kategorie": "Eis"
     },
     {
         "_bild": "../Bilder/kirsche.PNG",
         "_bildAlt": "Kirsche",
-        "_name": "Kirsche",
+        "_name": "Kirscheis",
         "_preis": 1.3,
         "_kategorie": "Eis"
     },
     {
         "_bild": "../Bilder/kiwi.PNG",
         "_bildAlt": "Kiwi",
-        "_name": "Kiwi",
+        "_name": "Kiwieis",
         "_preis": 1.3,
         "_kategorie": "Eis"
     },
     {
         "_bild": "../Bilder/mango.PNG",
         "_bildAlt": "Mango",
-        "_name": "Mango",
+        "_name": "Mangoeis",
         "_preis": 1.5,
         "_kategorie": "Eis"
     },
     {
         "_bild": "../Bilder/melone.PNG",
         "_bildAlt": "Melone",
-        "_name": "Melone",
+        "_name": "Meloneneis",
         "_preis": 1.5,
         "_kategorie": "Eis"
     },
     {
         "_bild": "../Bilder/pistazie.PNG",
         "_bildAlt": "Pistazie",
-        "_name": "Pistazie",
+        "_name": "Pistazieneis",
         "_preis": 1.7,
         "_kategorie": "Eis"
     },
@@ -128,7 +128,7 @@
     {
         "_bild": "../Bilder/schoko.PNG",
         "_bildAlt": "Schoko",
-        "_name": "Schoko",
+        "_name": "Schokoeis",
         "_preis": 1.5,
         "_kategorie": "Eis"
     },
@@ -156,7 +156,7 @@
     {
         "_bild": "../Bilder/vanille2.PNG",
         "_bildAlt": "Vanille",
-        "_name": "Vanille",
+        "_name": "Vanilleeis",
         "_preis": 1.3,
         "_kategorie": "Eis"
     },
@@ -170,7 +170,7 @@
     {
         "_bild": "../Bilder/waldbeeren.PNG",
         "_bildAlt": "Waldbeeren",
-        "_name": "Waldbeeren",
+        "_name": "Waldbeereis",
         "_preis": 1.6,
         "_kategorie": "Eis"
     }

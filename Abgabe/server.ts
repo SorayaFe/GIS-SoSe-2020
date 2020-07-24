@@ -64,7 +64,7 @@ export namespace Abgabe {
 
             if (q.pathname == "/abschicken") {
 
-                storebestellungen(<Bestellung>q.query);
+                storeBestellungen(<Bestellung>q.query);
             }
 
             if (q.pathname == "/loeschen") {
@@ -86,14 +86,13 @@ export namespace Abgabe {
 
                         _response.write(key + ": " + instanz[key] + "<br/>");
                     }
-
-                    _response.write("<button>bla</button>");
+                    _response.write("<button class='erledigt'>Erledigt</button>");
                     _response.write("</div>");
                 }
                 _response.end();
             }
 
-            function storebestellungen(_bestellung: Bestellung): void {
+            function storeBestellungen(_bestellung: Bestellung): void {
 
                 bestellungen.insertOne(_bestellung);
             }

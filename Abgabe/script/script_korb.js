@@ -16,7 +16,7 @@ var Abgabe;
         if (bestellung[i]._kategorie == "Eis") {
             count1 = count1 + 1;
             input.setAttribute("name", "Eis" + count1);
-            input.setAttribute("value", "Eis " + count1 + ": " + bestellung[i]._name);
+            input.setAttribute("value", bestellung[i]._name);
         }
         if (bestellung[i]._kategorie == "Topping") {
             count2 = count2 + 1;
