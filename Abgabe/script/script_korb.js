@@ -21,11 +21,11 @@ var Abgabe;
         if (bestellung[i]._kategorie == "Topping") {
             count2 = count2 + 1;
             input.setAttribute("name", "Topping" + count2);
-            input.setAttribute("value", "Topping " + count2 + ": " + bestellung[i]._name);
+            input.setAttribute("value", bestellung[i]._name);
         }
         if (bestellung[i]._kategorie == "Behaelter") {
             input.setAttribute("name", "Behaelter");
-            input.setAttribute("value", "Behälter: " + bestellung[i]._name);
+            input.setAttribute("value", bestellung[i]._name);
         }
         formular.appendChild(input);
     }
