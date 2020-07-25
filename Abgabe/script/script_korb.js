@@ -24,7 +24,7 @@ var Abgabe;
             input.setAttribute("value", bestellung[i]._name);
         }
         if (bestellung[i]._kategorie == "Behaelter") {
-            input.setAttribute("name", "Behaelter");
+            input.setAttribute("name", "Behälter");
             input.setAttribute("value", bestellung[i]._name);
         }
         formular.appendChild(input);
