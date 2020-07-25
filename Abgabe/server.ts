@@ -67,6 +67,11 @@ export namespace Abgabe {
                 storeBestellungen(<Bestellung>q.query);
             }
 
+            if (q.pathname == "/status") {
+
+                bestellungen.updateMany({Status: "offen"}, {$set: {Status: "versandt"}});
+            }
+
             if (q.pathname == "/loeschen") {
 
                 bestellungen.remove({});
@@ -86,7 +91,6 @@ export namespace Abgabe {
 
                         _response.write(key + ": " + instanz[key] + "<br/>");
                     }
-                    _response.write("<button class='erledigt'>Erledigt</button>");
                     _response.write("</div>");
                 }
                 _response.end();

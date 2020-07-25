@@ -1,32 +1,14 @@
  namespace Abgabe {
-
-    interface Bestellungen {
-
-        _id: string;
-        Eis1?: string;
-        Eis2?: string;
-        Eis3?: string;
-        Eis4?: string;
-        Eis5?: string;
-        Topping1?: string;
-        Topping2?: string;
-        Topping3?: string;
-        Behaelter: string;
-        Vorname: string;
-        Nachname: string;
-        Adresse: string;
-        PLZOrt: string;
-    }
     
     let deleteAll: HTMLElement = <HTMLElement>document.getElementById("deleteAll");
     let laden: HTMLElement = <HTMLElement>document.getElementById("laden");
-    let ladeErledigt: HTMLElement = <HTMLElement>document.getElementById("ladeErledigt");
+    let status: HTMLElement = <HTMLElement>document.getElementById("status");
 
     let serverAntwort: HTMLElement = <HTMLElement>document.getElementById("serverAntwort");
 
     deleteAll.addEventListener("click", handleDelete);
     laden.addEventListener("click", handleLaden);
-    ladeErledigt.addEventListener("click", handleLadeErledigt);
+    status.addEventListener("click", handleStatus);
 
     async function handleDelete(): Promise<void> {
         
@@ -57,27 +39,10 @@
 
         let antwort: Response = await fetch(url);
         let antwort2: string = await antwort.text();
-        
-        
-        let bestellungen: Bestellungen[] = JSON.parse(antwort2);
         serverAntwort.innerHTML = antwort2;
-
-        let erledigt: HTMLCollectionOf<Element> = document.getElementsByClassName("erledigt");
-        let erledigtArray: Element[] = Array.from(erledigt);
-
-        for (let i: number = 0; i < erledigtArray.length; i++) {
-            
-            let erledigtButton: HTMLElement = <HTMLElement>erledigtArray[i];
-            erledigtButton.addEventListener("click", handleErledigt);
-
-            for (let i: number = 0; i < bestellungen.length; i++) {
-
-                erledigtButton.setAttribute("bestellId", bestellungen[i]._id);
-            }
-        }
     }
 
-    async function handleLadeErledigt(): Promise<void> {
+    async function handleStatus(): Promise<void> {
 
         let formData: FormData = new FormData(document.forms[0]);
 
@@ -85,27 +50,7 @@
         let query: URLSearchParams = new URLSearchParams(<any>formData);
 
         let url: string = "https://gispraktikum2020.herokuapp.com";
-        url = url + "/ladeErledigt";
-        url = url + "?" + query.toString();
-
-        let antwort: Response = await fetch(url);
-        let antwort2: string = await antwort.text();
-        serverAntwort.innerHTML = antwort2;
-    }
-
-    async function handleErledigt(_event: Event): Promise<void> {
-
-        let geklickt: HTMLElement = <HTMLElement>_event.target;
-        let id: string = geklickt.getAttribute("bestellId")!;
-        console.log(id);
-
-        let formData: FormData = new FormData(document.forms[0]);
-
-        // tslint:disable-next-line: no-any
-        let query: URLSearchParams = new URLSearchParams(<any>formData);
-
-        let url: string = "https://gispraktikum2020.herokuapp.com";
-        url = url + "/erledigt";
+        url = url + "/status";
         url = url + "?" + query.toString();
 
         await fetch(url);

@@ -61,6 +61,14 @@
         formular.appendChild(br);
     }
 
+    let input: HTMLInputElement = <HTMLInputElement>document.createElement("input");
+    input.setAttribute("type", "text");
+    input.setAttribute("readonly", "true");
+    input.setAttribute("Status", "offen");
+    input.setAttribute("value", "offen");
+    formular.appendChild(input);
+    input.style.display = "none";
+
     //Bestellen Button
     let bestellen: HTMLButtonElement = <HTMLButtonElement>document.createElement("button");
     bestellen.setAttribute("type", "reset");

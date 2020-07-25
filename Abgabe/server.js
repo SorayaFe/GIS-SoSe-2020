@@ -42,6 +42,9 @@ var Abgabe;
             if (q.pathname == "/abschicken") {
                 storeBestellungen(q.query);
             }
+            if (q.pathname == "/status") {
+                bestellungen.updateMany({ Status: "offen" }, { $set: { Status: "versandt" } });
+            }
             if (q.pathname == "/loeschen") {
                 bestellungen.remove({});
             }
@@ -53,7 +56,6 @@ var Abgabe;
                     for (let key in instanz) {
                         _response.write(key + ": " + instanz[key] + "<br/>");
                     }
-                    _response.write("<button class='erledigt'>Erledigt</button>");
                     _response.write("</div>");
                 }
                 _response.end();
