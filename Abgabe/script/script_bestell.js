@@ -36,8 +36,9 @@ var Abgabe;
         let url = "https://gispraktikum2020.herokuapp.com";
         url = url + "/status";
         url = url + "?" + query.toString();
-        await fetch(url);
-        handleLaden();
+        let antwort = await fetch(url);
+        let antwort2 = await antwort.text();
+        serverAntwort.innerHTML = antwort2;
     }
 })(Abgabe || (Abgabe = {}));
 //# sourceMappingURL=script_bestell.js.map

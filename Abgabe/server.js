@@ -44,6 +44,15 @@ var Abgabe;
             }
             if (q.pathname == "/status") {
                 bestellungen.updateMany({ Status: "offen" }, { $set: { Status: "versandt" } });
+                let ergebnis = await bestellungen.find().toArray();
+                for (let i = 0; i < ergebnis.length; i++) {
+                    let instanz = ergebnis[i];
+                    _response.write("<div>");
+                    for (let key in instanz) {
+                        _response.write(key + ": " + instanz[key] + "<br/>");
+                    }
+                    _response.write("</div>");
+                }
             }
             if (q.pathname == "/loeschen") {
                 bestellungen.remove({});

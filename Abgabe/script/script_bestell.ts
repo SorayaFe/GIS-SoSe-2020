@@ -53,8 +53,8 @@
         url = url + "/status";
         url = url + "?" + query.toString();
 
-        await fetch(url);
-
-        handleLaden();
+        let antwort: Response = await fetch(url);
+        let antwort2: string = await antwort.text();
+        serverAntwort.innerHTML = antwort2;
     }
 }

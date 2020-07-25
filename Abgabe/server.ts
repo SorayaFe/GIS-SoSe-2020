@@ -70,6 +70,22 @@ export namespace Abgabe {
             if (q.pathname == "/status") {
 
                 bestellungen.updateMany({Status: "offen"}, {$set: {Status: "versandt"}});
+
+                let ergebnis: Bestellung[] = await bestellungen.find().toArray();
+
+                for (let i: number = 0; i < ergebnis.length; i++) {
+
+                    let instanz: Bestellung = ergebnis[i];
+
+                    _response.write("<div>");
+
+                    for (let key in instanz) {
+
+                        _response.write(key + ": " + instanz[key] + "<br/>");
+                    }
+                    _response.write("</div>");
+                }
+                
             }
 
             if (q.pathname == "/loeschen") {
