@@ -1,4 +1,22 @@
  namespace Abgabe {
+
+    interface Bestellungen {
+
+        _id: string;
+        Eis1?: string;
+        Eis2?: string;
+        Eis3?: string;
+        Eis4?: string;
+        Eis5?: string;
+        Topping1?: string;
+        Topping2?: string;
+        Topping3?: string;
+        Behaelter: string;
+        Vorname: string;
+        Nachname: string;
+        Adresse: string;
+        PLZOrt: string;
+    }
     
     let deleteAll: HTMLElement = <HTMLElement>document.getElementById("deleteAll");
     let laden: HTMLElement = <HTMLElement>document.getElementById("laden");
@@ -40,7 +58,8 @@
         let antwort: Response = await fetch(url);
         let antwort2: string = await antwort.text();
         serverAntwort.innerHTML = antwort2;
-        console.log(antwort2);
+        
+        let bestellungen: Bestellungen[] = JSON.parse(await antwort.text());
 
         let erledigt: HTMLCollectionOf<Element> = document.getElementsByClassName("erledigt");
         let erledigtArray: Element[] = Array.from(erledigt);
@@ -49,6 +68,11 @@
             
             let erledigtButton: HTMLElement = <HTMLElement>erledigtArray[i];
             erledigtButton.addEventListener("click", handleErledigt);
+
+            for (let i: number = 0; i < bestellungen.length; i++) {
+
+                erledigtButton.setAttribute("bestellId", bestellungen[i]._id);
+            }
         }
     }
 
@@ -69,6 +93,10 @@
     }
 
     async function handleErledigt(_event: Event): Promise<void> {
+
+        let geklickt: HTMLElement = <HTMLElement>_event.target;
+        let id: string = geklickt.getAttribute("bestellId")!;
+        console.log(id);
 
         let formData: FormData = new FormData(document.forms[0]);
 

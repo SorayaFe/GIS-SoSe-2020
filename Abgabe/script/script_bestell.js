@@ -28,12 +28,15 @@ var Abgabe;
         let antwort = await fetch(url);
         let antwort2 = await antwort.text();
         serverAntwort.innerHTML = antwort2;
-        console.log(antwort2);
+        let bestellungen = JSON.parse(await antwort.text());
         let erledigt = document.getElementsByClassName("erledigt");
         let erledigtArray = Array.from(erledigt);
         for (let i = 0; i < erledigtArray.length; i++) {
             let erledigtButton = erledigtArray[i];
             erledigtButton.addEventListener("click", handleErledigt);
+            for (let i = 0; i < bestellungen.length; i++) {
+                erledigtButton.setAttribute("bestellId", bestellungen[i]._id);
+            }
         }
     }
     async function handleLadeErledigt() {
@@ -48,6 +51,9 @@ var Abgabe;
         serverAntwort.innerHTML = antwort2;
     }
     async function handleErledigt(_event) {
+        let geklickt = _event.target;
+        let id = geklickt.getAttribute("bestellId");
+        console.log(id);
         let formData = new FormData(document.forms[0]);
         // tslint:disable-next-line: no-any
         let query = new URLSearchParams(formData);
