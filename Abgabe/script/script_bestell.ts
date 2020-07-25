@@ -60,6 +60,7 @@
         serverAntwort.innerHTML = antwort2;
 
         let test: Bestellung[] = JSON.parse(antwort2);
+        console.log(test);
 
         let erledigt: HTMLCollectionOf<Element> = document.getElementsByClassName("erledigt");
         let erledigtArray: Element[] = Array.from(erledigt);

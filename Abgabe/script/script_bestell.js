@@ -29,6 +29,7 @@ var Abgabe;
         let antwort2 = await antwort.text();
         serverAntwort.innerHTML = antwort2;
         let test = JSON.parse(antwort2);
+        console.log(test);
         let erledigt = document.getElementsByClassName("erledigt");
         let erledigtArray = Array.from(erledigt);
         for (let i = 0; i < erledigtArray.length; i++) {
