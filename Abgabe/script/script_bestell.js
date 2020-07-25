@@ -54,6 +54,7 @@ var Abgabe;
     async function handleErledigt(_event) {
         let geklickt = _event.target;
         let bestellId = geklickt.getAttribute("bestellId");
+        console.log("ziu");
         console.log(bestellId);
         let formData = new FormData(document.forms[0]);
         // tslint:disable-next-line: no-any

@@ -97,6 +97,8 @@
 
         let geklickt: HTMLElement = <HTMLElement>_event.target;
         let bestellId: string = geklickt.getAttribute("bestellId")!;
+        console.log("ziu");
+        
         console.log(bestellId);
 
         let formData: FormData = new FormData(document.forms[0]);
