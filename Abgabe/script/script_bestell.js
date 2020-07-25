@@ -28,16 +28,12 @@ var Abgabe;
         let antwort = await fetch(url);
         let antwort2 = await antwort.text();
         serverAntwort.innerHTML = antwort2;
-        let test = await JSON.parse(antwort2);
-        console.log(test);
+        console.log(antwort2);
         let erledigt = document.getElementsByClassName("erledigt");
         let erledigtArray = Array.from(erledigt);
         for (let i = 0; i < erledigtArray.length; i++) {
             let erledigtButton = erledigtArray[i];
             erledigtButton.addEventListener("click", handleErledigt);
-            for (let i = 0; i < test.length; i++) {
-                erledigtButton.setAttribute("bestellId", test[i]._id);
-            }
         }
     }
     async function handleLadeErledigt() {
@@ -52,10 +48,6 @@ var Abgabe;
         serverAntwort.innerHTML = antwort2;
     }
     async function handleErledigt(_event) {
-        let geklickt = _event.target;
-        let bestellId = geklickt.getAttribute("bestellId");
-        console.log("ziu");
-        console.log(bestellId);
         let formData = new FormData(document.forms[0]);
         // tslint:disable-next-line: no-any
         let query = new URLSearchParams(formData);
