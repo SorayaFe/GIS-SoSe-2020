@@ -59,7 +59,7 @@
         let antwort2: string = await antwort.text();
         serverAntwort.innerHTML = antwort2;
         
-        let bestellungen: Bestellungen[] = JSON.parse(await antwort.text());
+        let bestellungen: Bestellungen[] = JSON.parse(await antwort.json());
 
         let erledigt: HTMLCollectionOf<Element> = document.getElementsByClassName("erledigt");
         let erledigtArray: Element[] = Array.from(erledigt);
