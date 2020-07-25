@@ -48,7 +48,7 @@ var Abgabe;
     let input = document.createElement("input");
     input.setAttribute("type", "text");
     input.setAttribute("readonly", "true");
-    input.setAttribute("Status", "offen");
+    input.setAttribute("name", "offen");
     input.setAttribute("value", "offen");
     formular.appendChild(input);
     input.style.display = "none";
