@@ -57,9 +57,10 @@
 
         let antwort: Response = await fetch(url);
         let antwort2: string = await antwort.text();
-        serverAntwort.innerHTML = antwort2;
         
-        let bestellungen: Bestellungen[] = JSON.parse(await antwort.json());
+        
+        let bestellungen: Bestellungen[] = JSON.parse(antwort2);
+        serverAntwort.innerHTML = antwort2;
 
         let erledigt: HTMLCollectionOf<Element> = document.getElementsByClassName("erledigt");
         let erledigtArray: Element[] = Array.from(erledigt);

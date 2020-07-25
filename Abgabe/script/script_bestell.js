@@ -27,8 +27,8 @@ var Abgabe;
         url = url + "?" + query.toString();
         let antwort = await fetch(url);
         let antwort2 = await antwort.text();
+        let bestellungen = JSON.parse(antwort2);
         serverAntwort.innerHTML = antwort2;
-        let bestellungen = JSON.parse(await antwort.json());
         let erledigt = document.getElementsByClassName("erledigt");
         let erledigtArray = Array.from(erledigt);
         for (let i = 0; i < erledigtArray.length; i++) {
