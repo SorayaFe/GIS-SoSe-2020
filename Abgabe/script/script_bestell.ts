@@ -54,5 +54,7 @@
         url = url + "?" + query.toString();
 
         await fetch(url);
+
+        handleLaden();
     }
 }

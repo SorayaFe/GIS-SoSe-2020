@@ -37,6 +37,7 @@ var Abgabe;
         url = url + "/status";
         url = url + "?" + query.toString();
         await fetch(url);
+        handleLaden();
     }
 })(Abgabe || (Abgabe = {}));
 //# sourceMappingURL=script_bestell.js.map

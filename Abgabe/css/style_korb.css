@@ -70,7 +70,7 @@ h1 {
     outline: none;
 }
 
-#laden:active, #deleteAll:active {
+#laden:active, #deleteAll:active, #status:active {
     background-color: grey;
 }
 
@@ -83,7 +83,7 @@ h1 {
 #serverAntwort div {
     text-align: center;
     font-weight: bold;
-    background-color: rgb(219, 189, 219);
+    background-color: rgb(230, 209, 230);
     border-style: dotted;
     border-color: purple;
     border-radius: 20px;
