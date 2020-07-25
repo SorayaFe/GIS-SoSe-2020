@@ -85,7 +85,7 @@ export namespace Abgabe {
                     }
                     _response.write("</div>");
                 }
-                
+                _response.end();
             }
 
             if (q.pathname == "/loeschen") {
